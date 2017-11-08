@@ -19,6 +19,7 @@
         header{
             display: table;
             color: #83a190;
+            opacity: 9.0;
             background-color:#000000;
             margin: 0 auto;
             position: absolute;
