@@ -1,0 +1,191 @@
+ body {
+            font-family: 'Arvo', serif;
+            color: #000000;
+            padding: 0 0;
+            margin: 0 0;
+        }
+
+        html,body {
+              height:100%;
+        }
+
+        .wrapper {
+            position: relative;
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+        }
+
+        header{
+            display: table;
+            color: #83a190;
+            opacity: 9.0;
+            background-color:#000000;
+            margin: 0 auto;
+            position: absolute;
+            top: 0px;
+            height:90px;
+            width: 100%;
+            
+        }
+
+        .logo {
+            height: 70px;
+            float: left;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .homebutton {
+            display: table; 
+            background-color: #83a190;
+            color:#ffffff;
+            font-size: 18px;
+            font-weight: normal;
+            box-sizing: border-box;
+            border-radius: 20px;
+            height: 50px;
+            width: 300px;
+            text-align: center;
+            float: right;
+            margin-right: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            vertical-align: middle;
+        }
+
+        .homebutton p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .homebutton a:link, .homebutton a:visited, .homebutton a:active {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .homebutton a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding-top: 90px;
+            padding-bottom: 60px; 
+        }
+
+        .subcontent {
+            width: 650px;
+            max-height: 100px;
+            margin-top: 70px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #000000;
+            text-align: center;
+          
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .box1 {
+            display: table; 
+            background-color: #83a190;
+            color:#ffffff;
+            font-size: 20px;
+            font-weight: normal;
+            box-sizing: border-box;
+            border-radius: 30px;
+            height: 100px;
+            width: 300px;
+            text-align: center;
+            float: left;
+        }
+
+        .box2 {
+            display: table; 
+            background-color: #83a190;
+            color:#ffffff;
+            font-size: 20px;
+            font-weight: normal;
+            box-sizing: border-box;
+            border-radius: 30px;
+            height: 100px;
+            width: 300px;
+            text-align: center;
+            float: right;
+        }
+
+        .box3 {
+            display: table; 
+            background-color: #83a190;
+            color:#ffffff;
+            font-size: 20px;
+            font-weight: normal;
+            box-sizing: border-box;
+            border-radius: 30px;
+            height: 100px;
+            width: 300px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .box1 p, .box2 p, .box3 p {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .box1 a:link, .box1 a:visited, .box1 a:active, .box2 a:link, .box2 a:visited, .box2 a:active, .box3 a:link, .box3 a:visited, .box3 a:active {
+            color: #ffffff;
+            text-decoration: none; 
+        }
+
+        .box1 a:hover, .box2 a:hover, .box3 a:hover {
+            text-decoration: underline; 
+        }
+
+/*Footer*/
+        footer {
+            color: #83a190;
+            background-color:#000000;
+            overflow: hidden;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: normal;
+            text-align: center;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0px;
+            height: 60px;
+            width: 100%;
+        }
+        
+
+        footer a:link, footer a:visited, footer a:active {
+            color: #83a190;
+        }
+        
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        .footercontent {
+            display: inline;
+        }
+
+        .quizbild {
+            height: 200px;
+        }
+        
