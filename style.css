@@ -19,7 +19,6 @@
         header{
             display: table;
             color: #83a190;
-            opacity: 9.0;
             background-color:#000000;
             margin: 0 auto;
             position: absolute;
@@ -27,6 +26,31 @@
             height:90px;
             width: 100%;
             
+        }
+
+        #startseiten-text{
+float:left;
+width: 340px;
+margin: 50px 0 0 80px;
+font-family:ar cena;
+font-size:20px;
+color:#30322e;
+text-align: center;
+        }
+
+
+        #startButton{
+
+            width: 200px;
+            height: 60px;
+            border-radius:5px;
+            font-size:30px;
+            font-family:ar cena;
+            color:white;
+            margin: 120px 0 0 70px;
+            border-color:green;
+            background-color:#3FAA34;
+
         }
 
         .logo {
@@ -156,23 +180,33 @@
 
 /*Footer*/
         footer {
-            color: #83a190;
-            background-color:#000000;
+           color:white;
+            background-color:#30322e;
             overflow: hidden;
             text-decoration: none;
             font-size: 12px;
             font-weight: normal;
             text-align: center;
             margin: 0 auto;
-            position: absolute;
+            position: fixed;
             bottom: 0px;
-            height: 60px;
+            height: 90px;
             width: 100%;
+            font-family:calibri;
         }
+       
         
 
+  .footercontent{
+
+font-family:calibri;
+bottom:100px;
+
+}
         footer a:link, footer a:visited, footer a:active {
-            color: #83a190;
+            color: white;
+            text-decoration:none;
+           
         }
         
 
