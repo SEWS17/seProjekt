@@ -20,7 +20,7 @@
 
 <div class="header">
 
-        <a href="#"><img class ="logo" src="Bilder\logo.png" alt="Design Profi Logo"/></a>
+        <a href="#"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
         <div class= "homebutton">
                 <p><a href="#">Zurück zur Startseite</a></p>
         </div>

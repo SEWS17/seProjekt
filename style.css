@@ -11,14 +11,7 @@
            
         }
 
-<<<<<<< HEAD
         .wrapper {
-=======
-
-  
-
-        #wrapper {
->>>>>>> 83dcd6c9c707df574ba5af316df69bc62ffbe9e5
             position: relative;
             min-height: 100%;
             height: auto !important;
@@ -127,12 +120,8 @@ font-weight:900;
 
         .subcontent {
             width: 650px;
-<<<<<<< HEAD
             max-height: 100px;
             margin-top: 70px;
-=======
-            margin-top: 40px;
->>>>>>> 83dcd6c9c707df574ba5af316df69bc62ffbe9e5
             margin-left: auto;
             margin-right: auto;
         }
