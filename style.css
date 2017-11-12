@@ -23,8 +23,8 @@
 
         header{
             display: table;
-            color: #83a190;
-            background-color:#000000;
+            color: white;
+            background-color:#30322e;
             margin: 0 auto;
             position: absolute;
             top: 0px;
@@ -46,9 +46,9 @@ font-weight:900;
         }
 
 
-        #startButton{
+        .startButton{
 
-         margin-top: 15px;
+        
             border-radius:5px;
             font-size:30px;
             font-family:calibri;
@@ -62,7 +62,7 @@ font-weight:900;
         }
 
 
-        #startButton:hover, #startButton:active {
+        .startButton:hover, .startButton:active {
             background-color:white;
             color:#3FAA34;
             text-decoration: none;
@@ -73,26 +73,27 @@ font-weight:900;
         
 
         .logo {
-            height: 70px;
+            height: 55px;
             float: left;
             margin: auto;
             position: absolute;
             top: 0;
             margin-top: 10px;
             margin-bottom: 10px;
-            margin-left: 10px;
+            margin-left: 30px;
         }
 
         .homebutton {
             display: table; 
-            background-color: #83a190;
-            color:#ffffff;
+            background-color:none;
+            color:white;
             font-size: 18px;
             font-weight: normal;
-            box-sizing: border-box;
-            border-radius: 20px;
-            height: 50px;
-            width: 300px;
+            border-style:groove;
+            border-color:grey;
+            border-radius: 5px;
+            height: 30px;
+            width: 200px;
             text-align: center;
             float: right;
             margin-right: 10px;
@@ -131,6 +132,7 @@ font-weight:900;
             font-size: 30px;
             color: #000000;
             text-align: center;
+            font-family:'calibri';
           
         }
 
@@ -138,40 +140,43 @@ font-weight:900;
             font-size: 20px;
             color: #000000;
             text-align: center;
+            font-family:'calibri';
         }
 
         .box1 {
             display: table; 
-            background-color: #83a190;
-            color:#ffffff;
+            background-color: #3FAA34;
+            color:white;
             font-size: 20px;
-            font-weight: normal;
-            box-sizing: border-box;
-            border-radius: 30px;
-            height: 100px;
-            width: 300px;
+           font-family:'Calibri';
+           border-radius: 5px;
+            height: 80px;
+            width: 280px;
             text-align: center;
             float: left;
+            text-decoration: none !important;
         }
 
         .box2 {
             display: table; 
-            background-color: #83a190;
-            color:#ffffff;
+            background-color: #3FAA34;
+            color:white;
             font-size: 20px;
             font-weight: normal;
+            font-family:calibri;
             box-sizing: border-box;
-            border-radius: 30px;
-            height: 100px;
-            width: 300px;
+            border-radius: 5px;
+            height: 80px;
+            width: 280px;
             text-align: center;
             float: right;
+            text-decoration: none !important;
         }
 
         .box3 {
             display: table; 
-            background-color: #83a190;
-            color:#ffffff;
+            background-color: #3FAA34;
+            color:white;
             font-size: 20px;
             font-weight: normal;
             box-sizing: border-box;
@@ -181,6 +186,7 @@ font-weight:900;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
+            text-decoration: none !important;
         }
 
         .box1 p, .box2 p, .box3 p {
@@ -188,14 +194,30 @@ font-weight:900;
             vertical-align: middle;
         }
 
-        .box1 a:link, .box1 a:visited, .box1 a:active, .box2 a:link, .box2 a:visited, .box2 a:active, .box3 a:link, .box3 a:visited, .box3 a:active {
-            color: #ffffff;
-            text-decoration: none; 
+      .box1:hover, .box1:active {
+            background-color:white;
+            color:#3FAA34;
+            border-style: solid;
+            border-color:green;
+            text-decoration: none !important;
         }
 
-        .box1 a:hover, .box2 a:hover, .box3 a:hover {
-            text-decoration: underline; 
+        .box2:hover, .box2:active {
+            background-color:white;
+            color:#3FAA34;
+            border-style: solid;
+            border-color:green;
+            text-decoration: none !important;
         }
+       
+      .box3:hover, .box3:active {
+        background-color:white;
+        color:#3FAA34;
+        border-style: solid;
+        border-color:green;
+        text-decoration: none !important;
+    }
+
 
 /*Footer*/
         footer {
