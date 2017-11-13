@@ -67,6 +67,7 @@ font-weight:900;
             border-color:green;
         }
 
+
         
 
         .logo {
@@ -120,9 +121,9 @@ font-weight:900;
         }
 
         .subcontent {
-            width: 650px;
+            width: 750px;
             max-height: 100px;
-            margin-top: 70px;
+            margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -136,6 +137,7 @@ font-weight:900;
         }
 
         h2 {
+            margin-bottom:30px;
             font-size: 20px;
             color: #000000;
             text-align: center;
@@ -200,13 +202,14 @@ font-weight:900;
         }
 
         .box3 {
+            margin-left:130px;
             border-radius:5px;
             font-size:30px;
             font-family:'calibri';
             color:white !important;
             border-style: solid; 
             border-color:green;
-            background-color:#3FAA34;
+            background-color:#2B6922;
             padding: 15px 32px;
             text-align: center;
            text-decoration: none !important;
@@ -215,7 +218,7 @@ font-weight:900;
 
         .box3:hover, .box3:active {
             background-color:white !important;
-            color:#3FAA34 !important;
+            color:#2B6922!important;
             text-decoration: none;
             border-style: solid;
             border-color:green;
@@ -226,31 +229,11 @@ font-weight:900;
             vertical-align: middle;
         }
 
-
-
-      .box1:hover, .box1:active {
-            background-color:white;
-            color:#3FAA34;
-            border-style: solid;
-            border-color:green;
-            text-decoration: none !important;
-        }
-
-        .box2:hover, .box2:active {
-            background-color:white;
-            color:#3FAA34;
-            border-style: solid;
-            border-color:green;
-            text-decoration: none !important;
-        }
-       
-      .box3:hover, .box3:active {
-        background-color:white;
-        color:#3FAA34;
-        border-style: solid;
-        border-color:green;
-        text-decoration: none !important;
-    }
+    .button-group{
+        
+                    width: 600px;
+                    margin: 0 auto;
+                }
 
 
 /*Footer*/
