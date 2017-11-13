@@ -1,8 +1,9 @@
  body {
-            font-family: 'Arvo', serif;
+            font-family: 'calibri';
             color: #000000;
             padding: 0 0;
             margin: 0 0;
+      
         }
 
         html,body {
@@ -33,7 +34,7 @@
         #startseiten-text{
 float:left;
 width: 340px;
-margin: 5px 0 20px 400px;
+margin: 5px 0 20px 500px;
 font-family:'calibri';
 font-size:20px;
 color:black;
@@ -91,22 +92,22 @@ font-weight:900;
             border-style:groove;
             border-color:grey;
             border-radius: 5px;
-            height: 30px;
-            width: 200px;
+            height: 20px;
+            width: 170px;
             text-align: center;
             float: right;
             margin-right: 10px;
-            margin-top: 20px;
+        
             margin-bottom: 20px;
             vertical-align: middle;
         }
 
         .homebutton p{
-            display: table-cell;
+     
             vertical-align: middle;
         }
 
-        .homebutton a:link, .homebutton a:visited, .homebutton a:active {
+         .homebutton:visited, .homebutton:active {
             text-decoration: none;
             color: #ffffff;
         }
@@ -123,7 +124,7 @@ font-weight:900;
         .subcontent {
             width: 750px;
             max-height: 100px;
-            margin-top: 50px;
+          /*  margin-top: 50px;*/
             margin-left: auto;
             margin-right: auto;
         }
@@ -236,6 +237,42 @@ font-weight:900;
                 }
 
 
+/* vor und zurück button*/
+
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.weiter {
+   float:right;
+   margin-top: 30px;
+  font-family: 'calibri';
+    background-color: grey;
+    color: black;
+}
+
+.zurueck {
+    
+    margin-top:30px;
+    margin-left:450px;
+    background-color: grey;
+     color: black;
+     font-family: 'calibri';
+}
+
+
+
+
+
+
 /*Footer*/
         footer {
            color:white;
@@ -278,5 +315,6 @@ bottom:100px;
 
         .quizbild {
             height: 200px;
+            float: right;
         }
         

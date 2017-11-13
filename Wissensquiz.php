@@ -6,7 +6,7 @@
     <title>Design Profi</title>
     <?php
     $id = 0;
-    echo "<base href='index.php?id=".$id++."'/>";
+    echo "<base href='Wissensquiz.php?id=".$id++."'/>";
     ?>
 
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -21,9 +21,8 @@
 <div class="header">
 
         <a href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
-        <div class= "homebutton">
-                <p><a href="#">Zurück zur Startseite</a></p>
-        </div>
+       
+        <p><a class="homebutton" href="GestaltgesetzeHauptseite.html">Zurück zur Auswahl</a></p>
 </div>
 </header>
 
@@ -35,9 +34,35 @@
     
     <?php
     include_once ('check.php');
+    
+    $idurl = $_GET["id"];
+    $idurl++;
+
+
+       
+   
+    //$idurl2--;
+
+
+   echo "<p><a class='weiter' href='Wissensquiz.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
+
+
+   if($idurl > 2)
+{
+$idurl2=$idurl-2;
+ 
+ echo "<p><a class='zurueck' href='Wissensquiz.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
+
+}
+   
+  
+  
+   
+
+
+
+
     ?>
-
-
 
     </div>
        
