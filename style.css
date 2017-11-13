@@ -34,7 +34,7 @@
 float:left;
 width: 340px;
 margin: 5px 0 20px 400px;
-font-family:calibri;
+font-family:'calibri';
 font-size:20px;
 color:black;
 text-align: center;
@@ -81,6 +81,7 @@ font-weight:900;
         }
 
         .homebutton {
+            font-family: 'calibri';
             display: table; 
             background-color:none;
             color:white;
@@ -109,8 +110,8 @@ font-weight:900;
             color: #ffffff;
         }
 
-        .homebutton a:hover {
-            text-decoration: underline;
+        .homebutton:hover {
+        background-color:grey;
         }
 
         .content {
@@ -141,55 +142,87 @@ font-weight:900;
             font-family:'calibri';
         }
 
+
+
         .box1 {
-            display: table; 
-            background-color: #3FAA34;
-            color:white;
-            font-size: 20px;
-           font-family:'Calibri';
-           border-radius: 5px;
-            height: 80px;
-            width: 280px;
+
+            border-radius:5px;
+            font-size:30px;
+            font-family:'calibri';
+            color:white !important;
+            border-style: solid; 
+            border-color:green;
+            background-color:#3FAA34;
+            text-decoration:none;
+            padding: 15px 32px;
+            float:left;
             text-align: center;
-            float: left;
-            text-decoration: none !important;
+
         }
 
+
+        .box1:hover, .box1:active {
+            background-color:white;
+            color:#3FAA34 !important;
+            text-decoration: none;
+            border-style: solid;
+            border-color:green;
+        }
+
+
+
+
+
         .box2 {
-            display: table; 
-            background-color: #3FAA34;
-            color:white;
-            font-size: 20px;
-            font-weight: normal;
-            font-family:calibri;
-            box-sizing: border-box;
-            border-radius: 5px;
-            height: 80px;
-            width: 280px;
+            border-radius:5px;
+            font-size:30px;
+            font-family:'calibri';
+            color:white !important;
+            border-style: solid; 
+            border-color:green;
+            background-color:#3FAA34;
+            text-decoration:none;
+            padding: 15px 32px;
             text-align: center;
             float: right;
             text-decoration: none !important;
+        
+        }
+
+
+
+        .box2:hover, .box2:active {
+            background-color:white !important;
+            color:#3FAA34 !important;
+            text-decoration: none;
+            border-style: solid;
+            border-color:green;
         }
 
         .box3 {
-            display: table; 
-            background-color: #3FAA34;
-            color:white;
-            font-size: 20px;
-            font-weight: normal;
+            border-radius:5px;
+            font-size:30px;
             font-family:'calibri';
-            box-sizing: border-box;
-            border-radius: 5px;
-            height: 80px;
-            width: 280px;
+            color:white !important;
+            border-style: solid; 
+            border-color:green;
+            background-color:#3FAA34;
+            padding: 15px 32px;
             text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            text-decoration: none !important;
+           text-decoration: none !important;
+        }
+
+
+        .box3:hover, .box3:active {
+            background-color:white !important;
+            color:#3FAA34 !important;
+            text-decoration: none;
+            border-style: solid;
+            border-color:green;
         }
 
         .box1 p, .box2 p, .box3 p {
-            display: table-cell;
+        
             vertical-align: middle;
         }
 

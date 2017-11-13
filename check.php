@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "fragen";
+$dbname = "wissensquiz";
 
 
 
@@ -27,7 +27,8 @@ $answer =(@$_POST['answer']);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        if($row["id"] == $_GET['id']) {
+        //print_r($row);
+        if($row["id"] == $_GET['id']) {//Woher get??????
 echo "<img class= quizbild src='".$row["Bild"]."' alt='Bild Frage".$row["id"]."'/>";
 echo "<p>Frage ".$row["id"].": ".$row["Frage"]."</p>";
 echo "<form method='post'>";
