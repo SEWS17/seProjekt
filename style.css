@@ -82,6 +82,12 @@ font-weight:900;
             margin-left: 30px;
         }
 
+        a.logoLink {
+
+padding:0;
+
+
+        }
         .homebutton {
             font-family: 'calibri';
             display: table; 
@@ -247,7 +253,7 @@ a {
 }
 
 a:hover {
-    background-color: #ddd;
+   /* background-color: #ddd;*/
     color: black;
 }
 
@@ -300,13 +306,15 @@ bottom:100px;
 }
         footer a:link, footer a:visited, footer a:active {
             color: white;
-            text-decoration:none;
-           
+            text-decoration: none;
+           background-color:none;
         }
         
 
         footer a:hover {
-            color: #ffffff;
+            color:lightgreen;
+            text-decoration:underline;
+            background-color:none;
         }
 
         .footercontent {

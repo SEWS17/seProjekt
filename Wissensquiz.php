@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Design Profi</title>
+    <link rel="icon" type="image/png" href="Bilder/haken.png">
+
     <?php
     $id = 0;
     echo "<base href='Wissensquiz.php?id=".$id++."'/>";
@@ -20,7 +22,7 @@
 
 <div class="header">
 
-        <a href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
+        <a class="logoLink" href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
        
         <p><a class="homebutton" href="GestaltgesetzeHauptseite.html">Zurück zur Auswahl</a></p>
 </div>
