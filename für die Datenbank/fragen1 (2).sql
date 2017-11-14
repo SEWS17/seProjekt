@@ -17,10 +17,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fragen`
+-- Database: `wissensquiz`
 --
 
 -- --------------------------------------------------------
+
+
+/* Erstellen Sie die Datenbank Wissensquiz (z.B.) und übernehmen Sie die hier aufgeführte Tabelle in ihrem SQL-Fenster*/
+
+
 
 --
 -- Table structure for table `fragen`
