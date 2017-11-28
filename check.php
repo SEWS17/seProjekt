@@ -30,12 +30,13 @@ if ($result->num_rows > 0) {
         //print_r($row);
         if($row["id"] == $_GET['id']) {
 echo "<img class= quizbild src='".$row["Bild"]."' alt='Bild Frage".$row["id"]."'/>";
-echo "<p style='font-size:20px;margin-top:50px; font-weight:bold; '>Frage ".$row["id"].": ".$row["Frage"]."</p>";
+echo "<h1 style='font-size:20px;margin-top:50px; font-weight:bold; text-align: left; '>Frage ".$row["id"].":</h1>";
+echo "<p style='font-size:17px; font-weight:bold; text-align: left; '>".$row["Frage"]."</p>";
 echo "<form method='post'>";
 echo "<input type='radio' name='answer' value='".$row["AUSWAHL1"]."'>".$row["AUSWAHL1"]."<br>";
 echo "<input type='radio' name='answer' value='".$row["AUSWAHL2"]."'>".$row["AUSWAHL2"]."<br>";
 echo "<input type='radio' name='answer' value='".$row["AUSWAHL3"]."'>".$row["AUSWAHL3"]."<br>";
-echo "<input style='margin-top:30px;' type='submit' name='auswahl' value='Abschicken'>";
+echo "<input style='margin-top:20px;' type='submit' name='auswahl' value='Abschicken'>";
 echo "</form>";
 
 $canswer = $row["KORREKTE_ANTWORT"];
@@ -56,7 +57,7 @@ if(@$_POST['auswahl'] == true) {
 }
 
 
-echo "<p style='font-weight:bold; margin-top: 35px;'>Deine Antwort: </p> ".$answer;
+echo "<h2 style='font-size:20px; font-weight:bold; margin-top: 20px; text-align: left;'>Deine Antwort: </h2> ".$answer;
 echo "<p>$check</p>";
 
 ?> 
