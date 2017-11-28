@@ -1,54 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Design Profi</title>
-
-       
     <link rel="icon" type="image/png" href="Bilder/haken.png">
- 
+
+    <?php
+    $id = 0;
+    echo "<base href='Wissensquiz_Dialoggestaltung.php?id=".$id++."'/>";
+    ?>
+
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+    
 <body style="background:#ffffff">
-        <div id="wrapper">
+<div class="wrapper">
         
 <header>
 
 <div class="header">
 
         <a class="logoLink" href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
-    
-                <p><a class="homebutton" href="Startseite.html">Zurück zur Startseite</a></p>
-        
+       
+        <p><a class="homebutton" href="DialoggestaltungHauptseite.html">Zurück zur Auswahl</a></p>
 </div>
 </header>
 
 <div class="content">
 
     <div class= "subcontent">
-  
-        <h1 style="margin-top:50px;">Was möchtest Du lernen?</h1>
-    </br>
- <div class="button-group">
-     
-              <p>  <a class= "box1" href="GestaltgesetzeHauptseite.html"> Gestaltgesetze</a></p>
+
     
+    
+    <?php
+    include_once ('checkWissensquizDialoggestaltung.php');
+    
+    $idurl = $_GET["id"];
+    $idurl++;
 
 
-      
-                <p><a class= "box2" href="DialoggestaltungHauptseite.html">Dialoggestaltung</a></p>
+       
    
-</div>
-    
+    //$idurl2--;
+
+
+   echo "<p><a class='weiter' href='Wissensquiz_Dialoggestaltung.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
+
+
+   if($idurl > 2)
+{
+$idurl2=$idurl-2;
+ 
+ echo "<p><a class='zurueck' href='Wissensquiz_Dialoggestaltung.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
+
+}
+   
+  
+  
+   
+
+
+
+
+    ?>
+
     </div>
        
 </div>
 
     
-<main role="main">
+
     
-</main>
+
 
 
 <footer>
