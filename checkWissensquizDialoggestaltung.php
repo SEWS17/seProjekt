@@ -66,6 +66,8 @@ if(@$_POST['auswahl'] == true) {
     echo "Es sind keine Daten vorhanden.";
 }
 
+
+echo "<h2 style='font-size:20px; font-weight:bold; margin-top: 20px; text-align: left;'>Auswertung: </h2> ";
 echo "<p>$check</p>";
 
 ?> 
