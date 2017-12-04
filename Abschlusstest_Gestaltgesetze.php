@@ -24,7 +24,7 @@
 
         <a class="logoLink" href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
        
-        <p><a class="homebutton" href="DialoggestaltungHauptseite.html">Zurück zur Auswahl</a></p>
+        <p><a class="homebutton" href="GestaltgesetzeHauptseite.html">Zurück zur Auswahl</a></p>
 </div>
 </header>
 
