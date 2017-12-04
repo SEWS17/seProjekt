@@ -56,7 +56,7 @@ if(@$_POST['auswahl'] == true) {
 }
 
 
-echo "<p style='font-weight:bold; margin-top: 35px;'>Deine Antwort: </p> ".$answer;
+echo "<h4 style='font-weight:bold; margin-top: 35px;'>Deine Antwort: </h4> ".$answer;
 echo "<p>$check</p>";
 
 ?> 

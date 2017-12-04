@@ -254,7 +254,7 @@ a {
 
 a:hover {
    /* background-color: #ddd;*/
-    color: black;
+    color: green;
 }
 
 .weiter {
@@ -262,7 +262,7 @@ a:hover {
    margin-top: 30px;
   font-family: 'calibri';
     background-color: grey;
-    color: black;
+    color: white;
 }
 
 .zurueck {
@@ -270,7 +270,7 @@ a:hover {
     margin-top:30px;
     margin-left:450px;
     background-color: grey;
-     color: black;
+     color: white;
      font-family: 'calibri';
 }
 
