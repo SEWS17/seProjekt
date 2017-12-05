@@ -1,59 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Design Profi</title>
-
-       
     <link rel="icon" type="image/png" href="Bilder/haken.png">
- 
+
+    <?php
+    $id = 0;
+    echo "<base href='Wissensquiz_Dialoggestaltung.php?id=".$id++."'/>";
+    ?>
+
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+    
 <body style="background:#ffffff">
-        <div id="wrapper">
+<div class="wrapper">
         
 <header>
 
 <div class="header">
 
-       <a class="logoLink" href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
+        <a class="logoLink" href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
        
-       
-        <p><a class="homebutton" href="allgHauptseite.html">Zurück zur Auswahl</a></p>
+        <p><a class="homebutton" href="DialoggestaltungHauptseite.html">Zurück zur Auswahl</a></p>
 </div>
 </header>
 
 <div class="content">
-   <h1>Gestaltgesetze</h1>
-  
-    <div class= "subcontent">
-     
-          <h2>Was möchtest Du tun?</h2>
- 
-                <p><a class= "box1" href="#">Informationen lesen</a></p>
-   
-   
-                <p><a class= "box2" href="Wissensquiz_Gestaltgesetze.php?id=1">Wissensquiz durchführen</a></p>
-    </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-        <h2>Bist Du bereit für den Abschlusstest?</h2>
-    
 
-                <p><a class= "box3" href="Abschlusstest_Gestaltgesetze.php?id=1">Jetzt Abschlusstest durchführen</a></p>
+    <div class= "subcontent">
+
+    
+    
+    <?php
+    include_once ('checkWissensquizDialoggestaltung.php');
+    
+    $idurl = $_GET["id"];
+    $idurl++;
+
+
+       
    
+    //$idurl2--;
+
+
+   echo "<p><a class='weiter' href='Wissensquiz_Dialoggestaltung.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
+
+
+   if($idurl > 2)
+{
+$idurl2=$idurl-2;
+ 
+ echo "<p><a class='zurueck' href='Wissensquiz_Dialoggestaltung.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
+
+}
+   
+  
+  
+   
+
+
+
+
+    ?>
+
     </div>
        
 </div>
 
     
-<main role="main">
+
     
-</main>
+
 
 
 <footer>
