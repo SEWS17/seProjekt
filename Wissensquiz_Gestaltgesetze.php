@@ -38,16 +38,20 @@
     include_once ('checkWissensquizGestaltgesetze.php');
     
     $idurl = $_GET["id"];
-    $idurl++;
+   
+        $idurl++;
+        
+    
+    
 
 
        
    
     //$idurl2--;
 
-
+if($idurl < 9) {
    echo "<p><a class='weiter' href='Wissensquiz_Gestaltgesetze.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
-
+}
 
    if($idurl > 2)
 {
