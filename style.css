@@ -44,16 +44,17 @@
         }
 
         .startseiten-text2{
-            background-color: rgba(48, 50, 46, 0.5);
-            float:left;
-            width: 800px;
-            margin-left:0;
-            padding-left: 50px;
-            margin-top: 100px;
+            border-radius:30px;
+            background-color: #ffffff;
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            margin-top: 80px;
             font-family:'calibri';
             font-size:20px;
-            color:rgb(255, 255, 255);
-            text-align: left;
+            color: #000000;
+            text-align: center;
             font-weight:900;
             
             
@@ -61,8 +62,8 @@
         }
 
         .startseiten-text2 h1{
-            text-align: left;
-            color:#ffffff;
+            text-align: center;
+            color:#000000;
         }
 
 
