@@ -53,7 +53,7 @@
 {
 $idurl2=$idurl-2;
  
- echo "<p><a class='zurueck' href='Wissensquiz.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
+ echo "<p><a class='zurueck' href='Wissensquiz_Gestaltgesetze.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
 
 }
    
