@@ -49,7 +49,7 @@
    
     //$idurl2--;
 
-if($idurl < 9) {
+if($idurl < 10) {
    echo "<p><a class='weiter' href='Wissensquiz_Gestaltgesetze.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
 }
 
