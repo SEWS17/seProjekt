@@ -22,7 +22,7 @@
 
 <div class="header">
 
-        <a class="logoLink" href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
+        <a class="logoLink" href="index.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
        
         <p><a class="homebutton" href="DialoggestaltungHauptseite.html">Zurück zur Auswahl</a></p>
 </div>
