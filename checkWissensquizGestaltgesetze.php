@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 mysqli_set_charset($conn, 'utf8');
 
-$sql = "SELECT id, Bild, Frage, KORREKTE_ANTWORT, AUSWAHL1, AUSWAHL2, AUSWAHL3 FROM wissensquiz_gestaltgesetze";
+$sql = "SELECT id, Bild, Frage, KORREKTE_ANTWORT, AUSWAHL1, AUSWAHL2, AUSWAHL3 FROM fragen";
 $result = $conn->query($sql);
 
 
