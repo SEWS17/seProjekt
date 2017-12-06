@@ -67,12 +67,7 @@ if(@$_POST['auswahl'] == true) {
     echo "Es sind keine Daten vorhanden.";
 }
 
-<<<<<<< HEAD:check.php
-
-echo "<h4 style='font-weight:bold; margin-top: 35px;'>Deine Antwort: </h4> ".$answer;
-=======
 echo "<h2 style='font-size:20px; font-weight:bold; margin-top: 20px; text-align: left;'>Auswertung: </h2> ";
->>>>>>> 2c3ffa9eb8b02be92eca720cf1390e2e7a166abe:checkWissensquizGestaltgesetze.php
 echo "<p>$check</p>";
 
 ?> 

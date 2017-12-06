@@ -22,7 +22,7 @@
 
 <div class="header">
 
-        <a class="logoLink" href="Startseite.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
+        <a class="logoLink" href="index.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
        
         <p><a class="homebutton" href="GestaltgesetzeHauptseite.html">Zurück zur Auswahl</a></p>
 </div>
@@ -38,22 +38,26 @@
     include_once ('checkWissensquizGestaltgesetze.php');
     
     $idurl = $_GET["id"];
-    $idurl++;
+   
+        $idurl++;
+        
+    
+    
 
 
        
    
     //$idurl2--;
 
-
+if($idurl < 10) {
    echo "<p><a class='weiter' href='Wissensquiz_Gestaltgesetze.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
-
+}
 
    if($idurl > 2)
 {
 $idurl2=$idurl-2;
  
- echo "<p><a class='zurueck' href='Wissensquiz.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
+ echo "<p><a class='zurueck' href='Wissensquiz_Gestaltgesetze.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
 
 }
    

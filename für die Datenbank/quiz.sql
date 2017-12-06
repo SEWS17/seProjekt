@@ -88,6 +88,19 @@ CREATE TABLE `wissensquiz_dialoggestaltung` (
 INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
 ('1', 'logo.jpg', '1', '1', '1', '2', '1', '3');
 
+INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
+('2', 'DQuiz2.jpg', 'Die Grafik zeigt verschiedene Reiter eines Programmes. Einer dieser Reiter ist ausgeklappt und bietet weitere Optionen an. Neben den Optionen ist jeweils ein Tastenkürzel angegeben.', 'Welches Gesetz ist zu erkennen?', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Biete informatives Feedback.'),
+('3', 'DQuiz3.jpg', 'Ein Fenster zeigt an, dass es unmöglich ist eine Datei mit Sonderzeichen im Namen abzuspeichern.', 'Benenne das dargestellte Dialoggesetz', 'Biete einfache Fehlerbehandlung.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete einfache Fehlerbehandlung.'),
+('4', 'DQuiz4.jpg', 'Bildbeschreibung`', 'Frage', 'Unterstütze benutzergesteuerten Dialog.', 'Unterstütze benutzergesteuerten Dialog.', '1', '3'),
+('5', 'DQuiz5.jpg', 'Bildbeschreibung`', 'Frage', 'Reduziere die Belastung des Kurzzeitgedächtnisses.', '2', '1', 'Reduziere die Belastung des Kurzzeitgedächtnisses.'),
+('6', 'DQuiz6.jpg', 'Ein nach Links weisender Pfeil-Icon ist angewählt.', 'Wie lautet das dargestellte Gesetz?', 'Biete einfache Rücksetzmöglichkeiten.', 'Unterstütze benutzergesteuerten Dialog.', 'Biete informatives Feedback.', 'Biete einfache Rücksetzmöglichkeiten.'),
+('7', 'DQuiz7.jpg', 'Bildbeschreibung`', 'Frage', 'Versuche Konsistenz zu erreichen.', '2', 'Versuche Konsistenz zu erreichen.', '3'),
+('8', 'DQuiz8.jpg', 'Eine Fehlermeldung zeigt an: Geben sie mindestens einen Empfänger an.', 'Um welches Gesetz der Dialoggestaltung handelt es sich hier?', 'Biete informatives Feedback.', 'Biete informatives Feedback.', 'Versuche Konsistenz zu erreichen.', 'Biete erfahrenen Nutzern Abkürzungen an.');
+
+
+
+UPDATE 'wissensquiz_dialoggestaltung'SET Bild ='DQuiz1.jpg', Bildbeschreibung = '', Frage= '', KORREKTE_ANTWORT = '', AUSWAHL1=''; AUSWAHL2='', AUSWAHL3='' WHERE 'id' = '1' ;
+
 -- --------------------------------------------------------
 
 --
