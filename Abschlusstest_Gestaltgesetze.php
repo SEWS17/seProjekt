@@ -35,7 +35,9 @@
     
     
     <?php
-    include_once ('checkAbschlusstestGestaltgesetzte.php');
+    include_once ("checkAbschlusstestGestaltgesetzte.php");
+    include_once ("checkAbschlussquizAuswahl.php");
+
     
     $idurl = $_GET["id"];
     $idurl++;

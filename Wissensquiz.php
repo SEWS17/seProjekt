@@ -76,6 +76,8 @@ $idurl2=$idurl-2;
 
 
 
+</div>
+
 <footer>
     <div class="footer">
 <p>
@@ -89,6 +91,5 @@ $idurl2=$idurl-2;
 Copyright © 2017 Design Profi. Alle Rechte vorbehalten, all rights reserved.
     </div>
 </footer>
-</div>
 </body>
 </html>
