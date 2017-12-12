@@ -364,7 +364,7 @@ input[type="radio"]:checked + img {
 
 input, textarea, select, button {
     text-rendering: auto;
-    color: initial;
+    color: green;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;

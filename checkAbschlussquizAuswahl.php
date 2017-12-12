@@ -43,10 +43,10 @@ if ($result->num_rows > 0) {
                
                    
                    <label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'> <img src='".$row["BILD1"]."' height='200px' width='350px'></label>
-                   <label><input type='radio' style='display:none;' name='Kategorie' value='auswahl2'> <img src='".$row["BILD2"]."' height='200px' width='350px'></label>
+                   <label><input type='radio' style='display:none;' name='Kategorie' value='auswahl2'> <img src='".$row["BILD2"]."' height='170px' width='380px'></label>
                   
            
-               <input type='submit' name='submit'>
+               <input type='submit' name='submit' value='Auswahl auswerten' />
            </form>";
 
     
@@ -54,8 +54,7 @@ if ($result->num_rows > 0) {
 
            $canswer = $row["KORREKTE_ANTWORT"];
            
-           echo "<h2 style='font-size:20px; font-weight:bold; margin-top: 20px; text-align: left;'>Auswertung: </h2> ";
-           echo "<p>$check</p>";
+           
            
            if(@$_POST['Kategorie'] == true) {
                 if($answer == $canswer) {
@@ -64,14 +63,17 @@ if ($result->num_rows > 0) {
                 if($answer != $canswer) {
                    $check = "Diese Antwort ist leider falsch.";
                }
-           }
+            }
                }
-           }
+            }
+           
            } else {
                echo "Es sind keine Daten vorhanden.";
            
            
-           
+           }
+           echo "<h2 style='font-size:20px; font-weight:bold; margin-top: 20px; text-align: left;'>Auswertung: </h2> ";
+           echo "<p>$check</p>";
 
-           }         
+     
 ?>
