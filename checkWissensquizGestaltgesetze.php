@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 mysqli_set_charset($conn, 'utf8');
 
-$sql = "SELECT id, Bild, Frage, KORREKTE_ANTWORT, AUSWAHL1, AUSWAHL2, AUSWAHL3 FROM fragen";
+$sql = "SELECT id, Bild, Frage, KORREKTE_ANTWORT, AUSWAHL1, AUSWAHL2, AUSWAHL3 FROM wissensquiz_gestaltgesetze";
 $result = $conn->query($sql);
 
 
@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
         if($row["id"] == $_GET['id']) {
 
 echo "<img class= quizbild src='".$row["Bild"]."' alt='Bild Frage".$row["id"]."'/>";
-echo "<h1 style='font-size:20px;margin-top:50px; font-weight:bold; text-align: left; '>Frage ".$row["id"].":</h1>";
+echo "<h1 style='font-size:20px; font-weight:bold; text-align: left; '>Frage ".$row["id"].":</h1>";
 echo "<p style='font-size:17px; font-weight:bold; text-align: left; '>".$row["Frage"]."</p>";
 echo "<form method='post'>";
 
@@ -53,7 +53,7 @@ echo "</form>";
 $canswer = $row["KORREKTE_ANTWORT"];
 
 
-if(@$_POST['auswahl'] == true) {
+if(@$_POST['answer'] == true) {
      if($answer == $canswer) {
          $check = "Diese Antwort ist richtig.";
      }
