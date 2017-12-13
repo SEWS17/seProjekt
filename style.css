@@ -148,9 +148,11 @@ padding:0;
         background-color:grey;
         }
 
+
+        
         .content {
         
-            padding-bottom: 200px; 
+            padding-bottom:200px; 
             
         }
 
@@ -192,6 +194,11 @@ padding:0;
             font-family:'calibri';
         }
 
+        .content h3{
+
+            text-align: center;
+            font-family:calibri;
+        }
 
 
         .box1 {
@@ -283,6 +290,48 @@ padding:0;
                     margin: 0 auto;
                 }
 
+/*auswahl buttons auf der startseite der infoseite*/
+
+.auswahlButton{
+
+    border-radius:2.5px;
+    font-size:15px;
+    font-family:'calibri';
+    color:white !important;
+    border-style: solid; 
+    border-color:green;
+    background-color:#3FAA34;
+    text-decoration:none;
+    padding: 0 auto;
+    float:left;
+    text-align: center;
+    width:150px;
+    height:30px;
+}
+
+
+.auswahlButton:hover, .auswahlButton:active {
+    background-color:white !important;
+    color:#2B6922!important;
+    text-decoration: none;
+    border-style: solid;
+    border-color:green;
+}
+
+.auswahlButton:hover, .auswahlButton:active {
+            background-color:white !important;
+            color:#2B6922!important;
+            text-decoration: none;
+            border-style: solid;
+            border-color:green;
+        }
+
+      
+
+td{
+padding:8px;
+
+}
 
 /* vor und zurück button*/
 
@@ -381,6 +430,13 @@ input, textarea, select, button, meter, progress {
 }
 
 
+
+form p {
+     line-height: 1em !important;
+}
+
+
+
 /*Footer*/
         footer {
            color:white;
@@ -395,7 +451,7 @@ input, textarea, select, button, meter, progress {
             height: 90px;
             width: 100%;
             font-family:'calibri';
-            bottom:0;
+            /*bottom:0;*/
         }
        
         

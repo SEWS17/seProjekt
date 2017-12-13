@@ -37,13 +37,13 @@ if ($result->num_rows > 0) {
            echo"<div class= 'auswahlContainer' style='float: right;'>";
        
            echo "<h1 style='font-size:20px; font-weight:bold; text-align: left; '>Aufgabe ".$row["id"].":</h1>";
-           echo "<p style='font-size:17px; font-weight:bold; text-align: left; '>".$row["ATEXT"]."</p>";
-
+           echo "<p style='font-size:17px; text-align: left; '>".$row["ATEXT"]."</p>";
+            echo "<br>";
             echo"<form method='post' action=''>
                
                    
-                   <label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'> <img src='".$row["BILD1"]."' height='200px' width='350px'></label>
-                   <label><input type='radio' style='display:none;' name='Kategorie' value='auswahl2'> <img src='".$row["BILD2"]."' height='170px' width='380px'></label>
+                   <label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'> <img src='".$row["BILD1"]."'height='200px' width='360px';></label>
+                   <label><input type='radio' style='display:none;' name='Kategorie' value='auswahl2'> <img src='".$row["BILD2"]."' height='200px' width='360px'></label>
                   
            
                <input type='submit' name='submit' value='Auswahl auswerten' />
