@@ -45,7 +45,8 @@ if ($result->num_rows > 0) {
                    <label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'> <img src='".$row["BILD1"]."'height='200px' width='360px';></label>
                    <label><input type='radio' style='display:none;' name='Kategorie' value='auswahl2'> <img src='".$row["BILD2"]."' height='200px' width='360px'></label>
                   
-           
+           <br>
+           <br>
                <input type='submit' name='submit' value='Auswahl auswerten' />
            </form>";
 

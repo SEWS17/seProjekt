@@ -74,7 +74,6 @@ $idurl2=$idurl-2;
     <div class="clearing"></div>
 </div>
 
-
 <footer>
     <div class="footer">
 <p>

@@ -333,6 +333,11 @@ padding:8px;
 
 }
 
+tr{
+
+ margin-right:100px;   
+}
+
 /* vor und zurück button*/
 
 
@@ -451,7 +456,7 @@ form p {
             height: 90px;
             width: 100%;
             font-family:'calibri';
-            /*bottom:0;*/
+            bottom:0; 
         }
        
         
