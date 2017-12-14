@@ -52,7 +52,6 @@
             margin-left: auto;
             margin-right: auto;
             padding: 10px;
-            margin-top: 40px;
             font-family:'calibri';
             font-size:20px;
             color: #000000;
@@ -159,7 +158,7 @@ padding:0;
         .subcontent {
             width: 750px;
             /*max-height: 100px;*/
-          /*  margin-top: 50px;*/
+          margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -408,14 +407,6 @@ input[type="radio"]:checked + img {
 
 
 
-
-
-
-
-
-
-
-
 input, textarea, select, button {
     text-rendering: auto;
     color: green;
@@ -470,14 +461,14 @@ bottom:100px;
         footer a:link, footer a:visited, footer a:active {
             color: white;
             text-decoration: none;
-           background-color:none;
+           background-color:none !important;
         }
         
 
         footer a:hover {
-            color:lightgreen;
+            color:whitesmoke;
             text-decoration:underline;
-            background-color:none;
+            background-color:none !important;
         }
 
         .footercontent {
