@@ -35,29 +35,42 @@
     
     
     <?php
+    session_start();
+    if(isset($_GET["action"]) && $_GET['action'] == "auswertung") {
+        include_once ("checkAbschlusstestGestaltgesetzte.php");
+        include_once ("checkAbschlussquizAuswahl.php");
+        // echo $list[0]['id'], " - ", $list[0]['1KORREKTE_ANTWORT'];
+        // echo $list[1]['id'], " - ", $list[1]['1KORREKTE_ANTWORT'];
+
+        echo "<p><a class='auswertung' href='Abschlusstest_Gestaltgesetze.php?action=ende'>Abschlusstest abschließen!</a></p>";
+    } else {
     include_once ("checkAbschlusstestGestaltgesetzte.php");
     include_once ("checkAbschlussquizAuswahl.php");
-
+    }
     
-    $idurl = $_GET["id"];
-    $idurl++;
+    if(isset($_GET["id"])) {
+        $idurl = $_GET["id"];
+        $idurl++;
+     
 
 
        
    
     //$idurl2--;
 
+        if(isset($_GET["id"]) && $idurl < 10) {
+            echo "<p><a class='weiter' href='Abschlusstest_Gestaltgesetze.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
+        } else {
+            echo "<p><a class='auswertung' href='Abschlusstest_Gestaltgesetze.php?action=auswertung'>Zur Auswertung!</a></p>";
+        }
 
-   echo "<p><a class='weiter' href='Abschlusstest_Gestaltgesetze.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
-
-
-   if($idurl > 2)
-{
-$idurl2=$idurl-2;
+        if($idurl > 2) {
+            $idurl2=$idurl-2;
  
- echo "<p><a class='zurueck' href='Abschlusstest_Gestaltgesetze.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
+            echo "<p><a class='zurueck' href='Abschlusstest_Gestaltgesetze.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
 
-}
+        }
+    }
    
   
   
