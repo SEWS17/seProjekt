@@ -99,7 +99,7 @@ INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `F
 
 
 
-UPDATE 'wissensquiz_dialoggestaltung'SET Bild ='DQuiz1.jpg', Bildbeschreibung = '', Frage= 'Welches Dialoggesetz wird hier abgebildet?', KORREKTE_ANTWORT = 'Dialoge sollten abgeschlossen sein.', AUSWAHL1='Dialoge sollten abgeschlossen sein.'; AUSWAHL2='Versuche Konsistenz zu erreichen.', AUSWAHL3='Biete erfahrenen Nutzern Abkürzungen an.' WHERE 'id' = '1' ;
+UPDATE 'wissensquiz_dialoggestaltung'SET Bild ='DQuiz1.jpg', Bildbeschreibung = 'Ein Installationsfenster bietet die Möglichkeit an, das Setup abzubrechen, fortzufahren oder den Rechner herunterzufahren.', Frage= 'Welches Dialoggesetz wird hier abgebildet?', KORREKTE_ANTWORT = 'Dialoge sollten abgeschlossen sein.', AUSWAHL1='Dialoge sollten abgeschlossen sein.'; AUSWAHL2='Versuche Konsistenz zu erreichen.', AUSWAHL3='Biete erfahrenen Nutzern Abkürzungen an.' WHERE 'id' = '1' ;
 
 -- --------------------------------------------------------
 
