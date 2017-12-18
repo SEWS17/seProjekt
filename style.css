@@ -151,14 +151,14 @@ padding:0;
         
         .content {
         
-            padding-bottom:200px; 
+            /* padding-bottom:200px;  */
             
         }
 
         .subcontent {
             width: 750px;
             /*max-height: 100px;*/
-          margin-top: 50px;
+          margin-top: 30px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -325,7 +325,6 @@ padding:0;
             border-color:green;
         }
 
-      
 
 td{
 padding:8px;
@@ -354,7 +353,7 @@ a:hover {
 .weiter {
    float:right;
    margin-top: 10px;
-  font-family: 'calibri';
+    font-family: 'calibri';
     background-color: green;
     color: white;
 }
@@ -364,9 +363,17 @@ a:hover {
     margin-top:10px;
     margin-left:450px;
     background-color: green;
-     color: white;
-     font-family: 'calibri';
+    color: white;
+    font-family: 'calibri';
 }
+
+.auswertung {
+    float:right;
+    margin-top: 10px;
+    font-family: 'calibri';
+    background-color: #30322e;
+    color: white;
+ }
 
 
 .auswahlContainer{
@@ -428,7 +435,7 @@ input, textarea, select, button, meter, progress {
 
 
 form p {
-     line-height: 1em !important;
+     line-height: 1em;
 }
 
 
