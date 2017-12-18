@@ -85,10 +85,10 @@ CREATE TABLE `wissensquiz_dialoggestaltung` (
 -- Dumping data for table `wissensquiz_dialoggestaltung`
 --
 
-INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
-('1', 'logo.jpg', '1', '1', '1', '2', '1', '3');
+
 
 INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
+('1', 'DQuiz1.jpg', 'Ein Installationsfenster bietet die Möglichkeit an, das Setup abzubrechen, fortzufahren oder den Rechner herunterzufahren.', 'Welches Dialoggesetz wird hier abgebildet?', 'Dialoge sollten abgeschlossen sein.', 'Dialoge sollten abgeschlossen sein.', 'Versuche Konsistenz zu erreichen.', 'Biete erfahrenen Nutzern Abkürzungen an.'),
 ('2', 'DQuiz2.jpg', 'Die Grafik zeigt verschiedene Reiter eines Programmes. Einer dieser Reiter ist ausgeklappt und bietet weitere Optionen an. Neben den Optionen ist jeweils ein Tastenkürzel angegeben.', 'Welches Gesetz ist zu erkennen?', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Biete informatives Feedback.'),
 ('3', 'DQuiz3.jpg', 'Ein Fenster zeigt an, dass es unmöglich ist eine Datei mit Sonderzeichen im Namen abzuspeichern.', 'Benenne das dargestellte Dialoggesetz', 'Biete einfache Fehlerbehandlung.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete einfache Fehlerbehandlung.'),
 ('4', 'DQuiz4.jpg', 'Das Bild zeigt ein Installationsfenster, der Nutzer muss bestätigen, dass er mit der Installation fortfahren möchte und den AGBs zustimmt.', 'Welches Gesetz wird hier klar gezeigt?', 'Unterstütze benutzergesteuerten Dialog.', 'Unterstütze benutzergesteuerten Dialog.', 'Biete informatives Feedback.', 'Biete einfache Fehlerbehandlung.'),
@@ -99,7 +99,7 @@ INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `F
 
 
 
-UPDATE 'wissensquiz_dialoggestaltung'SET Bild ='DQuiz1.jpg', Bildbeschreibung = 'Ein Installationsfenster bietet die Möglichkeit an, das Setup abzubrechen, fortzufahren oder den Rechner herunterzufahren.', Frage= 'Welches Dialoggesetz wird hier abgebildet?', KORREKTE_ANTWORT = 'Dialoge sollten abgeschlossen sein.', AUSWAHL1='Dialoge sollten abgeschlossen sein.', AUSWAHL2='Versuche Konsistenz zu erreichen.', AUSWAHL3='Biete erfahrenen Nutzern Abkürzungen an.' WHERE 'id' = '1' ;
+
 
 -- --------------------------------------------------------
 
