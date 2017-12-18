@@ -1,5 +1,5 @@
 <?php
-
+$sessionID = session_id();
 
 $servername = "localhost";
 $username = "root";
@@ -22,33 +22,53 @@ $result = $conn->query($sql);
 
 // $check= "Du hast keine Antwort ausgewählt.";
 // $answer =(@$_POST['answer']);  
-
-$check= "Du hast keine Antwort ausgewählt.";
+$gesamtpunkte = 1;
+$check= "";
+$punkte = 0;
 $answer =(@$_POST['Kategorie']); 
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         //print_r($row);
-        if($row["id"] == $_GET['id']) {
-        
+        if(isset($_GET["id"]) && $row["id"] == $_GET['id']) {
+
+            echo "<style type='text/css'>
+            .error {
+                color:#ff0000;
+            }
+            .ok {
+                color:#00CC00;
+            }
+            </style>";
+            
+            $type = "";
+            if(isset($_POST['Submit']) && $_POST['Submit'] == '0' && isset($_POST['Kategorie'])) {
+                $type = 'disabled';
+            }
        
+            echo"<div class= 'auswahlContainer' style='float: right;'>";
        
-           echo"<div class= 'auswahlContainer' style='float: right;'>";
-       
-           echo "<h1 style='font-size:20px; font-weight:bold; text-align: left; '>Aufgabe ".$row["id"].":</h1>";
-           echo "<p style='font-size:17px; text-align: left; '>".$row["ATEXT"]."</p>";
+            echo "<h1 style='font-size:20px; font-weight:bold; text-align: left; '>Aufgabe ".$row["id"].":</h1>";
+            echo "<p style='font-size:17px; text-align: left; '>".$row["ATEXT"]."</p>";
             echo "<br>";
-            echo"<form method='post' action=''>
+            echo"<form method='post' action=''>";
                
                    
-                   <label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'> <img src='".$row["BILD1"]."'height='200px' width='360px';></label>
-                   <label><input type='radio' style='display:none;' name='Kategorie' value='auswahl2'> <img src='".$row["BILD2"]."' height='200px' width='360px'></label>
-                  
-           <br>
-           <br>
-               <input type='submit' name='submit' value='Auswahl auswerten' />
-           </form>";
+            echo "<label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'";
+            if(@$_POST['Kategorie'] == 'auswahl1') {echo "checked";}
+            echo "> <img src='".$row["BILD1"]."'height='200px' width='360px';></label>";
+
+            echo "<label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'";
+            if(@$_POST['Kategorie'] == 'auswahl2') {echo "checked";}
+            echo "> <img src='".$row["BILD2"]."'height='200px' width='360px';></label>";
+
+
+                   
+           echo "<br>";
+           echo "<br>";
+           echo "<button type='submit' name='Submit' value='0'".$type.">L&uuml;ckentext auswerten</button>";
+           echo "</form>";
 
     
       
@@ -57,26 +77,63 @@ if ($result->num_rows > 0) {
            
            
            
-           if(@$_POST['Kategorie'] == true) {
-                if($answer == $canswer) {
-                    $check = "Diese Antwort ist richtig.";
-                }
-                if($answer != $canswer) {
-                   $check = "Diese Antwort ist leider falsch.";
-               }
-                
+                if(@$_POST['Kategorie'] == true) {
+                    if($answer == $canswer) {
+                        $punkte = 1;
+                        $check= "";
+                    }
+                    if($answer != $canswer) {
+                        $punkte = 0;
+                        $check= "";
+                    }
+                    } else if(isset($_POST['Submit']) && $_POST['Submit'] == '0'){
+                        $check= "Du hast keine Antwort ausgewählt.";
+                    }
                
             
            
-           } else {
-               echo "Es sind keine Daten vorhanden.";
            
-           
-           }
-           echo "<h2 style='font-size:20px; font-weight:bold; margin-top: 20px; text-align: left;'>Auswertung: </h2> ";
+           echo "<h2 style='font-size:20px; font-weight:bold; margin-top: 20px; text-align: left;'>Hinweis: </h2> ";
            echo "<p>$check</p>";
+
+                    if($answer!="") {
+            
+                        $sqlinsert = "INSERT INTO abschlusstest_gestaltgesetze_auswertung (Aufgabe, sessionID, punkte, gesamtpunkte) 
+                                        VALUES ('".$row['id']."','".$sessionID."','".$punkte."','".$gesamtpunkte."');";
+    
+                            if ($conn->query($sqlinsert) === TRUE) {
+                                            
+                                } else {
+                                    echo "<p class=\"".(true ? "error" : "ok")."\">Aufgabe wurde schon gelöst</p>";
+                                }   
+                    }
 
         }
     }
+}else {
+    echo "Es sind keine Daten vorhanden.";
+
+
 }
+
+$sqldelete = "";
+if(isset($_GET["action"])) {
+    $action = (string) $_GET["action"];
+    if($action == "ende") {
+        $sqldelete = "DELETE FROM abschlusstest_gestaltgesetze_auswertung
+        WHERE sessionID = '".$sessionID."'";
+
+        if ($conn->query($sqldelete) === TRUE) {
+    
+        } else {
+            echo "Error: " . $sqldelete . "<br>" . $conn->error;
+        }
+    }
+}
+
+
+
+
+
+    
 ?>

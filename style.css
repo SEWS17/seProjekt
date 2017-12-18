@@ -83,7 +83,26 @@
             
         }
 
-        
+        .AuswahlButton{
+            
+                    
+                        border-radius:5px;
+                        font-size:30px;
+                        font-family:calibri;
+                        color:white;
+                        border-style: solid; 
+                        border-color:green;
+                        background-color:#3FAA34;
+                        text-decoration:none;
+                        padding: 15px 32px;
+                        width: 250px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                    }
+        .AuswertungÜberschrift {
+                    margin-top: 200px;
+        }
             
         .startButton:hover, .startButton:active {
             background-color:white;

@@ -42,10 +42,44 @@
         // echo $list[0]['id'], " - ", $list[0]['1KORREKTE_ANTWORT'];
         // echo $list[1]['id'], " - ", $list[1]['1KORREKTE_ANTWORT'];
 
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "quiz";
+        
+        $aconn = new mysqli($servername, $username, $password, $dbname);
+        // Verbindung überprüfen
+        if ($aconn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } 
+        
+        mysqli_set_charset($aconn, 'utf8');
+        
+        $sqlauswertung = "SELECT Aufgabe, sessionID, punkte, gesamtpunkte, SUM(punkte) AS SUMpunkte FROM abschlusstest_gestaltgesetze_auswertung WHERE sessionID = '".$sessionID."'";
+        $result = $conn->query($sqlauswertung);
+        $gespunkte = 9;
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                //print_r($row);
+               
+                 
+                
+                if($sessionID == $row["sessionID"]) {
+                echo "Du hast ".$row["SUMpunkte"]." von " .$gespunkte. " Punkten erreicht.";
+                }
+                
+            }
+        }
         echo "<p><a class='auswertung' href='Abschlusstest_Gestaltgesetze.php?action=ende'>Abschlusstest abschließen!</a></p>";
+    } else if(isset($_GET["action"]) && $_GET['action'] == "ende") {
+        echo "<h1 class=AuswertungÜberschrift>Du hast den Abschlusstest erfolgreich abgeschlossen!</h1>";
+        echo "<p><a class='AuswahlButton' href='GestaltgesetzeHauptseite.html'>Zurück zur Auswahl</a></p>";
+
     } else {
-    include_once ("checkAbschlusstestGestaltgesetzte.php");
-    include_once ("checkAbschlussquizAuswahl.php");
+        include_once ("checkAbschlusstestGestaltgesetzte.php");
+        include_once ("checkAbschlussquizAuswahl.php");
     }
     
     if(isset($_GET["id"])) {
