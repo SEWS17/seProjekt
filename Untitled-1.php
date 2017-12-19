@@ -20,25 +20,24 @@
        <a class="logoLink" href="index.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
        
        
-        <p><a class="homebutton" href="allgHauptseite.html">Zurück zur Auswahl</a></p>
+        <p><a class="homebutton" href="info-Gestaltgesetz-startseite.html">Zurück zur Auswahl</a></p>
 </div>
 </header>
 
 <div class="content">
-   <h1>Gestaltgesetze</h1>
+   <h1>Gesetz der Nähe</h1>
   
     <div class= "subcontent2">
 
-    <img src="Bilder\logo1.png" style="height: 55px; margin-right: 0px; float:right;" alt="Design Profi Logo"/>
+    <img src="Bilder\bild_frage3.jpg" style="height: 200px; margin-right: 0px; float:right;" alt="Design Profi Logo"/>
      
     <div style="width: 500px;">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-             natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-               eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pedeto, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-                Nullam dictum felis edunt tempus. Donec vitae sapien ut libe
+    Es besagt, dass gleiche Elemente (Elemente mit gleichem Reiz) mit geringeren
+     Abständen zueinander als zusammengehörig wahrgenommen werden.
+      In dieser Abbildung sehen wir links eine wilde Anordnung an
+       Fischen und rechts eine Einheit bildende. Wir nehmen diese Zusammengehörigkeit 
+       so wahr, weil die Elemente sich näher sind.
+    
     </div>
    
    
