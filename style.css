@@ -215,23 +215,14 @@ padding:0;
             margin-right: auto;
         }
 
-        .subcontent{
-
-            width: 750px;
-            /*max-height: 100px;*/
-          margin-top: 30px;
-            
-            margin-right: 0 auto;
-
-        }
         
-        .subcontent{
+        .subcontent2{
 
-            width: 750px;
+            width: 550px;
             /*max-height: 100px;*/
           margin-top: 30px;
-            
-            margin-right: 0 auto;
+        margin-left: 20px;
+        float:left;
 
         }
 
@@ -417,7 +408,14 @@ a {
     padding: 8px 16px;
 }
 
+<<<<<<< HEAD
 
+=======
+a:hover {
+   /* background-color: #ddd;
+    background-color: grey;*/
+}
+>>>>>>> fe5a806baef8f9ba78f39e19edfe11e5b9072bf3
 
 .weiter {
     float:right;

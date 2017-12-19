@@ -39,12 +39,37 @@
                 In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
                 Nullam dictum felis edunt tempus. Donec vitae sapien ut libe
 
-    </div>
+   
 
     <img src="Bilder\logo1.png" style="height: 55px; margin:30px 0 0 200px; float:left;" alt="Design Profi Logo"/>
    
+ <?php
+
+$idurl = $_GET["id"];
+
+     $idurl++;
+     
+ 
+    //$idurl2--;
+
+if($idurl < 10) {
+   echo "<p><a class='weiter' href='gestaltgesetzSeite.php?id=".$idurl."'>weiter</a></p>";
+}
+
+   if($idurl > 2)
+{
+$idurl2=$idurl-2;
+ 
+echo "<p><a class='zurueck' href='gestaltgesetzSeite.php?id=".$idurl2."'>zurück</a></p>";
+}
+   
+  ?>
+ </div>
+
     <div class="clearing"></div>   
 </div>
+
+
 
  
 <footer>

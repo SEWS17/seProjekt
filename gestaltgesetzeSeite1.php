@@ -43,8 +43,28 @@
 
     <img src="Bilder\logo1.png" style="height: 55px; margin:30px 0 0 200px; float:left;" alt="Design Profi Logo"/>
    
+ <?php
+    //$idurl2--;
+
+if($idurl < 10) {
+   echo "<p><a class='weiter' href='gestaltgesetzSeite".$idurl.".php'>weiter</a></p>";
+}
+
+   if($idurl > 2)
+{
+$idurl2=$idurl-2;
+ 
+ echo "<p><a class='zurueck' href='gestaltgesetzSeite".$idurl2.".php'>zurück</a></p>"; 
+
+}
+   
+  ?>
+
+
     <div class="clearing"></div>   
 </div>
+
+
 
  
 <footer>
