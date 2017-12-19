@@ -110,9 +110,40 @@
         a.logoLink {
 
 padding:0;
-
-
         }
+
+.manualLink{
+
+display:block;
+padding:0;
+
+}
+
+.logoManual{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ padding-top: 100px;
+}
+
+/*link im Benutzerhandbuch über Logo*/
+.logoManualLink{
+
+    padding:0;
+
+    display:block;
+
+}
+
+
+    hr { 
+        width: 95%; 
+        height: 5px; 
+        margin: 0 auto;
+        color:yellow;
+        background: green;
+    }
+
         .homebutton {
             font-family: 'calibri';
             display: table; 
@@ -146,6 +177,7 @@ padding:0;
         .homebutton:hover {
         background-color:grey;
         }
+
 
 
         
@@ -346,7 +378,7 @@ a {
 }
 
 a:hover {
-   /* background-color: #ddd;*/
+    background-color: #ddd;
     background-color: grey;
 }
 
@@ -356,6 +388,7 @@ a:hover {
     font-family: 'calibri';
     background-color: green;
     color: white;
+    border-radius: 5px;
 }
 
 .zurueck {
@@ -365,6 +398,7 @@ a:hover {
     background-color: green;
     color: white;
     font-family: 'calibri';
+    border-radius: 5px;
 }
 
 .auswertung {

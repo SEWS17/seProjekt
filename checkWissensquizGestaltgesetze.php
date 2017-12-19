@@ -17,11 +17,12 @@ if ($conn->connect_error) {
 
 mysqli_set_charset($conn, 'utf8');
 
+
 $sql = "SELECT id, Bild, Frage, KORREKTE_ANTWORT, AUSWAHL1, AUSWAHL2, AUSWAHL3 FROM wissensquiz_gestaltgesetze";
 $result = $conn->query($sql);
 
-
 $check= "Du hast keine Antwort ausgewählt.";
+
 $answer =(@$_POST['answer']);  
 
 if ($result->num_rows > 0) {
@@ -29,6 +30,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         //print_r($row);
         if($row["id"] == $_GET['id']) {
+
 
 echo "<img class= quizbild src='".$row["Bild"]."' alt='Bild Frage".$row["id"]."'/>";
 echo "<h1 style='font-size:20px; font-weight:bold; text-align: left; '>Frage ".$row["id"].":</h1>";
