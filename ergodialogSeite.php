@@ -146,9 +146,7 @@ if(isset($_GET["id"]) && $idurl < 10) {
 
     //$idurl2--;
 
-if($idurl < 8) {
-   echo "<a class='weiter2' href='ergodialogSeite.php?id=".$idurl."'>weiter</a>";
-}
+
 
    if($idurl > 2)
 {
@@ -156,7 +154,9 @@ $idurl2=$idurl-2;
  
 echo "<a class='zurueck2' href='ergodialogSeite.php?id=".$idurl2."'>zurück</a>";
 }
-
+if($idurl < 8) {
+    echo "<a class='weiter2' href='ergodialogSeite.php?id=".$idurl."'>weiter</a>";
+ }
 
 }
    
