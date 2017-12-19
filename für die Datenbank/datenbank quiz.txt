@@ -1,0 +1,210 @@
+﻿-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 19, 2017 at 01:38 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `quiz`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abschlusstest_auswahl_gestaltgesetze`
+--
+
+CREATE TABLE `abschlusstest_auswahl_gestaltgesetze` (
+  `id` int(11) NOT NULL,
+  `ATEXT` varchar(900) NOT NULL,
+  `BILD1` char(50) NOT NULL,
+  `BILD2` char(50) NOT NULL,
+  `KORREKTE_ANTWORT` char(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `abschlusstest_auswahl_gestaltgesetze`
+--
+
+INSERT INTO `abschlusstest_auswahl_gestaltgesetze` (`id`, `ATEXT`, `BILD1`, `BILD2`, `KORREKTE_ANTWORT`) VALUES
+(1, 'Das Gesetz der Nähe ist das einfachste Gestaltgesetz - was nicht so zu verstehen ist, es sei damit auch das unwichtigste. Verstöße gegen das Gesetz der Nähe können verheerende Auswirkungen auf die Verständlichkeit einer Website oder Benutzeroberfläche haben. Das betrifft nicht nur Buttons und Grafiken, sondern auch das Layout von Texten bzw. Links. Wie kann man sich einen solchen "Verstoß" vorstellen? Bitte wähle in diesem Beispiel wie das Gesetz der Nähe nicht(!) verstanden wird!', 'Bilder/GdNaehe.png', 'Bilder/GdNaehe2.png', 'auswahl1'),
+(3, 'In der Praxis ist das Gesetz der Geschlossenheit besonders interessant, wenn viele Informationen angezeigt werden müssen, die sich auf mehrere Oberbegriffe oder Überschriften verteilen. Betrachten hierzu die zwei Screenshots einer Wettervorhersage auf einer Webseite. Welche Abbildung zeigt das Gesetz der Geschlossenheit am ehesten?', 'Bilder/GdGeschlossenheit.gif', 'Bilder/GdGeschlossenheit2.gif', 'auswahl2'),
+(5, 'Das Gesetz der guten Fortsetzung ist wichtig bei der Ausrichtung von Elementen und spielt im Webdesign eine große Rolle. Alle Elemente sollten an Fluchtlinien ausgerichtet sein. Durch Alignierung lässt sich die Anzahl der Fluchtlinien verringern, was für eine übersichtlichere und geordnetere Darstellung sorgt. Die Folgenden Bilder zeigen zum einen Links die wie in einem Fließtext umgebrochen sind und Menüpunkte einer Navigation. Welches dieser zwei Beispiele zeigt das Gesetz der guten Fortsetzung am ehesten?', 'Bilder/GdFortsetzung1.gif', 'Bilder/GdFortsetzung22.gif', 'auswahl2'),
+(7, 'Wir bekommen durch das Gesetz der Symmetrie (und natürlich dessen Anwendung) mehr Ordnung und Übersicht in unsere Website. Und das Design der Website wirkt harmonischer.\r\n\r\n\r\n\r\nAuf dieser Seite sollen die Produktboxen besonders hervorgehoben werden, welches dieser zwei Beispiele weist das Gesetz der Symmetrie auf?', 'Bilder/Gdsymmetrie2.jpeg', 'Bilder/Gdsymmetrie.jpeg', 'auswahl2'),
+(9, 'Das Gesetz der Kontur ist kontrastbehaftet. Werden beispielsweise Bilder verwendet, um einen Header darzustellen, werden Konturen ausgelassen, um Worte abzubilden. Das Gesetz wird auch das „Gesetz der Innenseite“ genannt, also alles was Konturen bekommt, sei es ein Rahmen, oder eben im Beispiel davor, das Bild im Header.\r\n\r\nNachfolgend sind 2 Beispiele von verschiedene Webseiten abgebildet. Welches Beispiel zeigt den wahren design profi?', 'Bilder/kontur1.jpeg', 'Bilder/kontur.png', 'auswahl2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abschlusstest_gestaltgesetze_auswertung`
+--
+
+CREATE TABLE `abschlusstest_gestaltgesetze_auswertung` (
+  `Aufgabe` int(11) NOT NULL,
+  `sessionID` char(200) NOT NULL,
+  `punkte` int(11) DEFAULT NULL,
+  `gesamtpunkte` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `abschlusstest_gestaltgesetze_auswertung`
+--
+
+INSERT INTO `abschlusstest_gestaltgesetze_auswertung` (`Aufgabe`, `sessionID`, `punkte`, `gesamtpunkte`) VALUES
+(1, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(5, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(7, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(9, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abschlusstest_lückentext_gestaltgesetze`
+--
+
+CREATE TABLE `abschlusstest_lückentext_gestaltgesetze` (
+  `id` int(11) NOT NULL,
+  `Aufgabe` char(100) NOT NULL,
+  `TEXT1` char(200) NOT NULL,
+  `1AUSWAHL1` char(50) NOT NULL,
+  `1AUSWAHL2` char(50) NOT NULL,
+  `1AUSWAHL3` char(50) NOT NULL,
+  `1KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT2` char(200) NOT NULL,
+  `2AUSWAHL1` char(50) NOT NULL,
+  `2AUSWAHL2` char(50) NOT NULL,
+  `2AUSWAHL3` char(50) NOT NULL,
+  `2KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT3` char(200) NOT NULL,
+  `3AUSWAHL1` char(50) NOT NULL,
+  `3AUSWAHL2` char(50) NOT NULL,
+  `3AUSWAHL3` char(50) NOT NULL,
+  `3KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT4` char(200) NOT NULL,
+  `4AUSWAHL1` char(50) NOT NULL,
+  `4AUSWAHL2` char(50) NOT NULL,
+  `4AUSWAHL3` char(50) NOT NULL,
+  `4KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT5` char(200) NOT NULL,
+  `5AUSWAHL1` char(50) NOT NULL,
+  `5AUSWAHL2` char(50) NOT NULL,
+  `5AUSWAHL3` char(50) NOT NULL,
+  `5KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT6` char(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `abschlusstest_lückentext_gestaltgesetze`
+--
+
+INSERT INTO `abschlusstest_lückentext_gestaltgesetze` (`id`, `Aufgabe`, `TEXT1`, `1AUSWAHL1`, `1AUSWAHL2`, `1AUSWAHL3`, `1KORREKTE_ANTWORT`, `TEXT2`, `2AUSWAHL1`, `2AUSWAHL2`, `2AUSWAHL3`, `2KORREKTE_ANTWORT`, `TEXT3`, `3AUSWAHL1`, `3AUSWAHL2`, `3AUSWAHL3`, `3KORREKTE_ANTWORT`, `TEXT4`, `4AUSWAHL1`, `4AUSWAHL2`, `4AUSWAHL3`, `4KORREKTE_ANTWORT`, `TEXT5`, `5AUSWAHL1`, `5AUSWAHL2`, `5AUSWAHL3`, `5KORREKTE_ANTWORT`, `TEXT6`) VALUES
+(2, 'Bitte fülle den Lückentext über das Gesetz der Gleichheit aus!', 'Viele Elemente auf Webseiten haben sehr oft ein', 'gleiches', 'eindeutiges', 'prägnantes', 'gleiches', 'Aussehen. Beispiele dafür sind Überschriften, Menüs oder', 'Icons', 'Bilder', 'die Navigation', 'die Navigation', '. Dies weckt beim Benutzer', 'einen Wiedererkennungswert', 'einen Überraschungseffekt', 'Neugierde', 'einen Wiedererkennungswert', '. Dieses Prinzip wird oft von Webdesignern oder Gestaltern verwendet, um dem Benutzer eine', 'unterschiedliche Darstellung', 'übersichtliche Bedienung', 'Geschlossenheit', 'übersichtliche Bedienung', 'sowie einen', 'identischen', 'ähnlichen', 'einheitlichen', 'einheitlichen', 'visuellen Auftritt zu bieten.'),
+(4, 'Bitte fülle den Lückentext aus!', 'Schon von klein auf sind dem Menschen Formen, wie Kreise, Quadrate, Rechtecke und Dreiecke bekannt. Alles wird auf diese', 'Grundelemente', 'Konturen', 'Einheiten', 'Grundelemente', 'reduziert, was in der Gestaltpsychologie das Grundgesetz der menschlichen', 'Wahrnehmung', 'Emotionen', 'Fantasie', 'Wahrnehmung', 'ist. Der Mensch bildet bei der Wahrnehmung von Figuren automatisch', 'Formen', 'Konturen', 'Gruppen', 'Gruppen', '. Deshalb sollten beispielsweise alle  Buttons, die zu einer Aufgabe benötigt werden,', 'gleichmäßig verteilt', 'in einer Gruppe', 'separat', 'in einer Gruppe', 'innerhalb eines Fensters angeordnet werden. Hier wurde das Gesetz der', 'guten Fortsetzung', 'Geschlossenheit', 'Guten Gestalt', 'Guten Gestalt', 'beschrieben.'),
+(6, 'Bitte fülle den Lückentext aus!', 'Die Wirkungen der Gestaltungsgesetze können durch kombinierten Einsatz oder die Hinzunahme graphischer Hilfsmittel wie Linien auch gezielt', 'erkannt', 'dargestellt', 'verstärkt', 'verstärkt', 'oder auch', 'versteckt', 'abgeschwächt', 'isoliert', 'abgeschwächt', 'werden. Auf der Website eines Online Shops werden Produkte mit ermäßigten Preisen oft mit einem SALE Symbol versehen. Dadurch findet', 'eine Anpassung zu', 'eine deutliche Hervorhebung von', 'eine Zusammengehörigkeit zu', 'eine deutliche Hervorhebung von', 'den anderen Elementen statt. Damit', 'fallen diese schnell auf', 'werden diese übersehen', 'sind diese angeglichen', 'fallen diese schnell auf', 'und der Blick wird auf diese Produkte gerichtet. Die Rede Ist von', 'dem Gesetz der Schließung', 'dem Gesetz des gemeinsamen Schicksals', 'der Verstärkung und Abschwächung der Wirkungen', 'der Verstärkung und Abschwächung der Wirkungen', '.'),
+(8, 'Bitte fülle den Lückentext über das Gesetz des gemeinsamen Schicksals aus!', 'Auch sehr unterschiedliche Elemente, die sich in', 'die gleiche Richtung', 'aufeinander zu', 'unterschiedliche Richtungen', 'die gleiche Richtung', 'oder', 'durcheinander', 'nicht', 'im gleichen Rhythmus', 'im gleichen Rhythmus', 'bewegen, werden als', 'bewegende Formen', 'eine Form', 'zusammengehörige Gruppe', 'zusammengehörige Gruppe', 'wahrgenommen. Die Ähnlichkeit im Verhalten kann mittels', 'großes Durcheinander', 'Bewegung und Animation', 'Farbe und Größe', 'Bewegung und Animation', 'erzeugt werden. Für den Benutzer erschließen sich', 'Zusammenhänge', 'Formen', 'Abstände', 'Zusammenhänge', 'und es vereinheitlichen sich ein gesamter Satz an Figuren. Diese helfen dem Benutzer bestimmte Ereignisse oder Meldungen einordnen zu können.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wissensquiz_dialoggestaltung`
+--
+
+CREATE TABLE `wissensquiz_dialoggestaltung` (
+  `id` char(50) NOT NULL,
+  `Bild` char(50) NOT NULL,
+  `Bildbeschreibung` varchar(100) NOT NULL,
+  `Frage` char(50) NOT NULL,
+  `KORREKTE_ANTWORT` char(50) NOT NULL,
+  `AUSWAHL1` char(50) NOT NULL,
+  `AUSWAHL2` char(50) NOT NULL,
+  `AUSWAHL3` char(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `wissensquiz_dialoggestaltung`
+--
+
+INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
+('1', 'logo.jpg', '1', '1', '1', '2', '1', '3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wissensquiz_gestaltgesetze`
+--
+
+CREATE TABLE `wissensquiz_gestaltgesetze` (
+  `id` char(50) NOT NULL,
+  `Bild` char(50) NOT NULL,
+  `Bildbeschreibung` varchar(100) NOT NULL,
+  `Frage` char(50) NOT NULL,
+  `KORREKTE_ANTWORT` char(50) NOT NULL,
+  `AUSWAHL1` char(50) NOT NULL,
+  `AUSWAHL2` char(50) NOT NULL,
+  `AUSWAHL3` char(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `wissensquiz_gestaltgesetze`
+--
+
+INSERT INTO `wissensquiz_gestaltgesetze` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
+('1', 'Bilder\\bild_frage1.jpg', 'Durch Aussparung und Weißraum wird ein Panda dargestellt. Mit schwarzen Kreisen die Ohren, Nase, Aug', 'Welches Gesetz wurde angewandt?', 'Gesetz der Geschlossenheit', 'Gesetz der Nähe', 'Gesetz der Geschlossenheit', 'Gesetz der guten Gestalt'),
+('2', 'Bilder\\bild_frage2.jpg', 'Sieben schwarze Kreise kommen wirr im Raum vor. Darüber spannt sich ein Quader in weiß auf und wird ', 'Welches Gesetz ist hier gut erkennbar?', 'Gesetz der guten Gestalt', 'Gesetz der guten Gestalt', 'Gesetz der Nähe', 'Gesetz der Geschlossenheit'),
+('3', 'Bilder\\bild_frage3.jpg', 'Es gibt fünf Zeilen und acht Spalten. Jede Zeile hat abwechselnd einen schwarzen Quader oder einen s', 'Welches Gesetz ist hier gut erkennbar?', 'Gesetz der Ähnlichkeit', 'Gesetz der Ähnlichkeit', 'Gesetz der Nähe', 'Gesetz der Geschlosseheit'),
+('4', 'Bilder\\bild_frage4.png', 'Links kommen mehrere Fische wirr im Raum vor. Auf der rechten Seite formiert sich ein Fischschwarm z', 'Welches Gesetz ist hier gut erkennbar?', 'Gesetz der Nähe', 'Gesetz der Symmetrie', 'Gesetz der guten Gestalt', 'Gesetz der Nähe'),
+('5', 'Bilder\\bild_frage5.png', 'Es werden Kreise mit Klammern dargestellt. Eine Klammer öffnet sich und lässt ein wenig Weissraum, d', 'Welches Gesetz wird gezeigt?', 'Gesetz der Symmetrie', 'Gesetz der Nähe', 'Gesetz der Symmetrie', 'Gesetz der Ähnlichkeit'),
+('6', 'Bilder\\bild_frage6.png', 'Durch viele Kreise wird eine Welle dargestellt. Erst steigt sie langsam an, hat einen Hochpunkt und ', 'Welches Gesetz ist ersichtlich?', 'Gesetz der guten Fortsetzung', 'Gesetz der Ähnlichkeit', 'Gesetz der guten Fortsetzung', 'Gesetz der Nähe'),
+('7', 'Bilder\\bild_frage7.png', 'Es werden Pfeile in jeweils drei Zeilen angeordnet. Die erste Zeile an Pfeilen zeigt in die rechte R', 'Welches Gesetz ist zu erkennen?', 'Gesetz des gemeinsamen Schicksals', 'Gesetz des gemeinsamen Schicksals', 'Gesetz der guten Gestalt', 'Gesetz der Nähe'),
+('8', 'Bilder\\bild_frage8.jpg', 'Durch dicke Balken in unterschiedlicher Streckung oder Stauchung wird ein Zebra dargestellt. Die Ane', 'Welches Gesetz ist zu erkennen?', 'Gesetz der Kontinuität', 'Gesetz der guten Gestalt', 'Gesetz der Kontinuität', 'Gesetz der Symmetrie'),
+('9', 'Bilder\\bild_frage9.gif', 'Mehrere Linien verlaufen senkrecht nachunten im gleichen Abstand. Einige sind rot, andere schwarz od', 'Welches Gesetz ist hier gut erkennbar?', 'Gesetz der Gleichheit', 'Gesetz der Gleichheit', 'Gesetz des gemeinsamen Schicksals', 'Gesetz der Nähe');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `abschlusstest_auswahl_gestaltgesetze`
+--
+ALTER TABLE `abschlusstest_auswahl_gestaltgesetze`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `abschlusstest_gestaltgesetze_auswertung`
+--
+ALTER TABLE `abschlusstest_gestaltgesetze_auswertung`
+  ADD UNIQUE KEY `Aufgabe` (`Aufgabe`,`sessionID`);
+
+--
+-- Indexes for table `abschlusstest_lückentext_gestaltgesetze`
+--
+ALTER TABLE `abschlusstest_lückentext_gestaltgesetze`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wissensquiz_dialoggestaltung`
+--
+ALTER TABLE `wissensquiz_dialoggestaltung`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wissensquiz_gestaltgesetze`
+--
+ALTER TABLE `wissensquiz_gestaltgesetze`
+  ADD PRIMARY KEY (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -28,22 +28,27 @@
    <h1>Gestaltgesetze</h1>
   
     <div class= "subcontent2">
+
+    <img src="Bilder\logo1.png" style="height: 55px; margin-right: 0px; float:right;" alt="Design Profi Logo"/>
      
+    <div style="width: 500px;">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
             Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
              natoque penatibus et magnis dis parturient montes, nascetur
               ridiculus mus. Donec quam felis, ultricies nec, pellentesque
                eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+                pedeto, rhoncus ut, imperdiet a, venenatis vitae, justo. 
                 Nullam dictum felis edunt tempus. Donec vitae sapien ut libe
-
     </div>
-
-    <img src="Bilder\logo1.png" style="height: 55px; margin:30px 0 0 200px; float:left;" alt="Design Profi Logo"/>
+   
    
  <?php
+
+$idurl = 1;
+
+     $idurl++;
+     
+ 
     //$idurl2--;
 
 if($idurl < 10) {
@@ -54,12 +59,11 @@ if($idurl < 10) {
 {
 $idurl2=$idurl-2;
  
- echo "<p><a class='zurueck' href='gestaltgesetzSeite".$idurl2.".php'>zurück</a></p>"; 
-
+echo "<p><a class='zurueck' href=''gestaltgesetzSeite".$idurl2.".php'>zurück</a></p>";
 }
    
   ?>
-
+ </div>
 
     <div class="clearing"></div>   
 </div>
