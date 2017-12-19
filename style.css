@@ -356,7 +356,7 @@ padding:0;
 
 .auswahlButton{
 
-    border-radius:2.5px;
+    border-radius:5px;
     font-size:15px;
     font-family:'calibri';
     color:white !important;
@@ -368,7 +368,7 @@ padding:0;
     float:left;
     text-align: center;
     width:150px;
-    height:30px;
+    height:54px;
 }
 
 
