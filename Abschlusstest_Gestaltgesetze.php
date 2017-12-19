@@ -54,8 +54,8 @@
     $bewertung = "";
 
     if(isset($_GET["action"]) && $_GET['action'] == "auswertung") {
-        include_once ("checkAbschlusstestGestaltgesetzte.php");
-        include_once ("checkAbschlussquizAuswahl.php");
+        include_once ("checkAbschlusstestGestaltgesetzteLueckentext.php");
+        include_once ("checkAbschlusstestGestaltgesetzeAuswahl.php");
         
         
         $sqlauswertung = "SELECT Aufgabe, sessionID, punkte, gesamtpunkte, SUM(punkte) AS SUMpunkte FROM abschlusstest_gestaltgesetze_auswertung WHERE sessionID = '".$sessionID."'";
@@ -90,8 +90,8 @@
         echo "<p><a class='AuswahlButton' href='GestaltgesetzeHauptseite.html'>Zurück zur Auswahl</a></p>";
 
     } else {
-        include_once ("checkAbschlusstestGestaltgesetzte.php");
-        include_once ("checkAbschlussquizAuswahl.php");
+        include_once ("checkAbschlusstestGestaltgesetzteLueckentext.php");
+        include_once ("checkAbschlusstestGestaltgesetzeAuswahl.php");
     }
     
     if(isset($_GET["id"])) {
