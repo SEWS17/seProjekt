@@ -41,7 +41,7 @@
 
    
 
-    <img src="Bilder\logo1.png" style="height: 55px; margin:30px 0 0 200px; float:left;" alt="Design Profi Logo"/>
+    <img src="Bilder\logo1.png" style="height: 55px; margin:30px 0 0 200px; float:right;" alt="Design Profi Logo"/>
    
  <?php
 
