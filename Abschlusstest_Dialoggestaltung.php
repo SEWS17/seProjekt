@@ -53,11 +53,10 @@
     $bewertung = "";
 
     if(isset($_GET["action"]) && $_GET['action'] == "auswertung") {
-        include_once ("checkAbschlusstestGestaltgesetzte.php");
-        include_once ("checkAbschlussquizAuswahl.php");
+        include_once ("checkAbschlusstestDialoggestaltungLueckentext.php");
+        include_once ("checkAbschlusstestDialoggestaltungAuswahl.php");
         
-        
-        $sqlauswertung = "SELECT Aufgabe, sessionID, punkte, gesamtpunkte, SUM(punkte) AS SUMpunkte FROM abschlusstest_gestaltgesetze_auswertung WHERE sessionID = '".$sessionID."'";
+        $sqlauswertung = "SELECT Aufgabe, sessionID, punkte, gesamtpunkte, SUM(punkte) AS SUMpunkte FROM abschlusstest_dialoggestaltung_auswertung WHERE sessionID = '".$sessionID."'";
         $result = $conn->query($sqlauswertung);
         $gespunkte = 9;
 
@@ -83,14 +82,14 @@
                 
             }
         }
-        echo "<p><a class='auswertung' href='Abschlusstest_Gestaltgesetze.php?action=ende'>Abschlusstest abschließen!</a></p>";
+        echo "<p><a class='auswertung' href='Abschlusstest_Dialoggestaltung.php?action=ende'>Abschlusstest abschließen!</a></p>";
     } else if(isset($_GET["action"]) && $_GET['action'] == "ende") {
         echo "<h1 class=AuswertungÜberschrift>Du hast den Abschlusstest erfolgreich abgeschlossen!</h1>";
-        echo "<p><a class='AuswahlButton' href='GestaltgesetzeHauptseite.html'>Zurück zur Auswahl</a></p>";
+        echo "<p><a class='AuswahlButton' href='DialoggestaltungHauptseite.html'>Zurück zur Auswahl</a></p>";
 
     } else {
-        include_once ("checkAbschlusstestGestaltgesetzte.php");
-        include_once ("checkAbschlussquizAuswahl.php");
+        include_once ("checkAbschlusstestDialoggestaltungLueckentext.php");
+        include_once ("checkAbschlusstestDialoggestaltungAuswahl.php");
     }
     
     if(isset($_GET["id"])) {
@@ -98,16 +97,16 @@
         $idurl++;
      
 
-        if(isset($_GET["id"]) && $idurl < 10) {
-            echo "<p><a class='weiter' href='Abschlusstest_Gestaltgesetze.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
+        if(isset($_GET["id"]) && $idurl < 9) {
+            echo "<p><a class='weiter' href='Abschlusstest_Dialoggestaltung.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
         } else {
-            echo "<p><a class='auswertung' href='Abschlusstest_Gestaltgesetze.php?action=auswertung'>Zur Auswertung!</a></p>";
+            echo "<p><a class='auswertung' href='Abschlusstest_Dialoggestaltung.php?action=auswertung'>Zur Auswertung!</a></p>";
         }
 
         if($idurl > 2) {
             $idurl2=$idurl-2;
  
-            echo "<p><a class='zurueck' href='Abschlusstest_Gestaltgesetze.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
+            echo "<p><a class='zurueck' href='Abschlusstest_Dialoggestaltung.php?id=".$idurl2."'>zurück zu Frage $idurl2</a></p>"; 
 
         }
     }
@@ -117,7 +116,7 @@
         if(isset($_GET["action"])) {
             $action = (string) $_GET["action"];
             if($action == "ende") {
-                $sqldelete = "DELETE FROM abschlusstest_gestaltgesetze_auswertung
+                $sqldelete = "DELETE FROM abschlusstest_dialoggestaltung_auswertung
                 WHERE sessionID = '".$sessionID."'";
 
                 if ($aconn->query($sqldelete) === TRUE) {
