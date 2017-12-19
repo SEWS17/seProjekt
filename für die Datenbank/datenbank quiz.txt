@@ -117,6 +117,54 @@ INSERT INTO `abschlusstest_lückentext_gestaltgesetze` (`id`, `Aufgabe`, `TEXT1`
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abschlusstest_lückentext_dialoggesetze`
+--
+
+CREATE TABLE `abschlusstest_lückentext_dialoggesetze` (
+  `id` int(11) NOT NULL,
+  `Aufgabe` char(100) NOT NULL,
+  `TEXT1` char(200) NOT NULL,
+  `1AUSWAHL1` char(50) NOT NULL,
+  `1AUSWAHL2` char(50) NOT NULL,
+  `1AUSWAHL3` char(50) NOT NULL,
+  `1KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT2` char(200) NOT NULL,
+  `2AUSWAHL1` char(50) NOT NULL,
+  `2AUSWAHL2` char(50) NOT NULL,
+  `2AUSWAHL3` char(50) NOT NULL,
+  `2KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT3` char(200) NOT NULL,
+  `3AUSWAHL1` char(50) NOT NULL,
+  `3AUSWAHL2` char(50) NOT NULL,
+  `3AUSWAHL3` char(50) NOT NULL,
+  `3KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT4` char(200) NOT NULL,
+  `4AUSWAHL1` char(50) NOT NULL,
+  `4AUSWAHL2` char(50) NOT NULL,
+  `4AUSWAHL3` char(50) NOT NULL,
+  `4KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT5` char(200) NOT NULL,
+  `5AUSWAHL1` char(50) NOT NULL,
+  `5AUSWAHL2` char(50) NOT NULL,
+  `5AUSWAHL3` char(50) NOT NULL,
+  `5KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT6` char(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `abschlusstest_lückentext_dialoggesetze`
+--
+
+INSERT INTO `abschlusstest_lückentext_dialoggesetze` (`id`, `Aufgabe`, `TEXT1`, `1AUSWAHL1`, `1AUSWAHL2`, `1AUSWAHL3`, `1KORREKTE_ANTWORT`, `TEXT2`, `2AUSWAHL1`, `2AUSWAHL2`, `2AUSWAHL3`, `2KORREKTE_ANTWORT`, `TEXT3`, `3AUSWAHL1`, `3AUSWAHL2`, `3AUSWAHL3`, `3KORREKTE_ANTWORT`, `TEXT4`, `4AUSWAHL1`, `4AUSWAHL2`, `4AUSWAHL3`, `4KORREKTE_ANTWORT`, `TEXT5`, `5AUSWAHL1`, `5AUSWAHL2`, `5AUSWAHL3`, `5KORREKTE_ANTWORT`, `TEXT6`) VALUES
+(2, 'Bitte fülle den Lückentext aus!', 'Das Programm sollte immer so funktionieren, dass es dem Nutzer ', 'immer', 'nicht', 'plötzlich', 'nicht', 'möglich ist fatale Fehler zu begehen. Falls ein Fehler gemacht wurde, sollte das System diesen ', 'ignorieren','löschen','ermitteln','ermitteln',' und einfache, verständliche Lösungsmechanismen vorschlagen. Das besagt das Gestaltungsgesetz: „Biete einfache ', 'Kommunikation','Rücksetzungsmöglichkeiten','Fehlerbehandlung','Fehlerbehandlung','“.', '', '', '', '', '', '', '', '', '', ''),
+(4, 'Bitte fülle den Lückentext aus!', 'Die', 'Unendlichkeit', 'Begrenzung', 'Raumwerte', 'Begrenzung', ' der menschlichen Informationsaufnahme des Kurzzeitgedächtnisses macht es sinnvoll, dass Anzeigen übersichtlich gehalten und reduziert sind. Sequenzen und Codes sollten eine hinreichende ', 'Reichweite', 'Trainingszeit', 'Grundeinstellung', 'Trainingszeit', 'haben. Deshalb sollten Informationen', 'niemals', 'immer', 'manchmal', 'immer', 'in gedächtnisgerechten Mengen zugeführt werden.', '', '', '', '', '', '', '', '', '', ''),
+(6, 'Bitte fülle den Lückentext aus!', 'Mit erhöhter ', 'Häufigkeit', 'Intelligenz', 'Seltenheit', 'Seltenheit', ' der Nutzung eines Programmes steigt das Bedürfnis die Interaktionen zu minimieren. Ein erfahrener Nutzer wünscht sich Abkürzungen, Shortcuts und versteckte ', 'Überraschungen', 'Anforderungen', 'befehle', 'Befehle', '), die die Interaktion beschleunigen. Biete ', 'neuen', 'erfahrenen', 'klugen', 'erfahrenen', 'Nutzern Abkürzungen an.', '', '', '', '', '', '', '', '', '', ''),
+(8, 'Bitte fülle den Lückentext aus!', 'Die acht goldenen Regeln des Dialogdesigns wurden von Ben ', 'Shneidermann', 'Schneider', 'Smith', 'Shneidermann', ' entwickelt.', '1999', '1978', '1986', '1986', ') kamen sie erstmals in seinem Buch “Designing the User Interface: Strategies for Effective Human-Computer-', 'Connections', 'Replacement', 'Interaction', 'Interaction', '” vor.', '', '', '', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
 --
 -- Table structure for table `wissensquiz_dialoggestaltung`
 --
@@ -137,8 +185,20 @@ CREATE TABLE `wissensquiz_dialoggestaltung` (
 --
 
 INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
-('1', 'logo.jpg', '1', '1', '1', '2', '1', '3');
+('1', 'Bilder/DQuiz1.jpg', 'Ein Installationsfenster bietet die Möglichkeit an, das Setup abzubrechen, fortzufahren oder den Rec', 'Welches Dialoggesetz wird hier abgebildet?', 'Dialoge sollten abgeschlossen sein.', 'Dialoge sollten abgeschlossen sein.', 'Versuche Konsistenz zu erreichen.', 'Biete erfahrenen Nutzern Abkürzungen an.'),
+('2', 'Bilder/DQuiz2.jpg', 'Die Grafik zeigt verschiedene Reiter eines Programmes. Einer dieser Reiter ist ausgeklappt und biete', 'Welches Gesetz ist zu erkennen?', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Biete informatives Feedback.'),
+('3', 'Bilder/DQuiz3.jpg', 'Ein Fenster zeigt an, dass es unmöglich ist eine Datei mit Sonderzeichen im Namen abzuspeichern.', 'Benenne das dargestellte Dialoggesetz', 'Biete einfache Fehlerbehandlung.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete einfache Fehlerbehandlung.'),
+('4', 'Bilder/DQuiz4.jpg', 'Das Bild zeigt ein Installationsfenster, der Nutzer muss bestätigen, dass er mit der Installation fo', 'Welches Gesetz wird hier klar gezeigt?', 'Unterstütze benutzergesteuerten Dialog.', 'Unterstütze benutzergesteuerten Dialog.', 'Biete informatives Feedback.', 'Biete einfache Fehlerbehandlung.'),
+('5', 'Bilder/DQuiz5.jpg', 'Eine unübersichtliche Webseite ist zu erkennen, die mit vielen Farben, verschiedenen Fonts und keine', 'Welches Gesetz wurde hier offensichtlich nicht bea', 'Reduziere die Belastung des Kurzzeitgedächtnisses.', 'Dialoge sollten abgeschlossen sein.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Reduziere die Belastung des Kurzzeitgedächtnisses.'),
+('6', 'Bilder/DQuiz6.jpg', 'Ein nach Links weisender Pfeil-Icon ist angewählt.', 'Wie lautet das dargestellte Gesetz?', 'Biete einfache Rücksetzmöglichkeiten.', 'Unterstütze benutzergesteuerten Dialog.', 'Biete informatives Feedback.', 'Biete einfache Rücksetzmöglichkeiten.'),
+('7', 'Bilder/DQuiz7.jpg', 'Eine überladene Webseite bewirbt zu verkaufende Produkte, die nach keinem erkennbaren Muster angeord', 'Welches Dialoggesetz missachtet diese Webseite?', 'Versuche Konsistenz zu erreichen.', 'Biete einfache Fehlerbehandlung.', 'Versuche Konsistenz zu erreichen.', 'Dialoge sollten abgeschlossen sein.'),
+('8', 'Bilder/DQuiz8.jpg', 'Eine Fehlermeldung zeigt an: Geben sie mindestens einen Empfänger an.', 'Um welches Gesetz der Dialoggestaltung handelt es', 'Biete informatives Feedback.', 'Biete informatives Feedback.', 'Versuche Konsistenz zu erreichen.', 'Biete erfahrenen Nutzern Abkürzungen an.');
 
+--
+-- Indizes der exportierten Tabellen
+--
+
+--
 -- --------------------------------------------------------
 
 --
