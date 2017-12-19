@@ -72,25 +72,10 @@ if(isset($_GET["id"]) && $idurl == 1) {
   if(isset($_GET["id"]) && $idurl == 4) {
                         
                           
-                      echo" <img src='Bilder\bild_frage1.jpg' style='height: 200px; margin-right: 0px; float:right;' alt='Durch Aussparung und Weißraum wird ein Panda dargestellt. Mit schwarzen Kreisen die Ohren, Nase, Augen und Beine. Der Betrachter vervollständigt das Tier automatisch, obwohl es nur angedeutet wird'/>
-                      <h1 style='text-align:left;'>Gesetz der Geschlossenheit</h1>
+                      echo" 
+                       <h1 style='text-align:left;'>Dialoge sollten abgeschlossen sein</h1>
                        <div style='width: 500px;'>
-                       Das Gesetz der Geschlossenheit besagt, dass Dinge mit geschlossenem Umriss
-                        oder Elemente, die von einer Linie umfasst sind, von unserer Wahrnehmung 
-                        gruppiert, also als zusammengehörig aufgefasst werden. Dinge, die durch
-                         Linien getrennt sind, wirken nicht zusammengehörig.
-                       Das Gesetz der Geschlossenheit ist ein sehr wichtiges Werkzeug zum
-                        Ordnen von Informationen, zum Hervorheben von Zusammenhängen und 
-                        zum Erleichtern der Orientierung. Im Webdesign spielt es deshalb eine
-                         große Rolle. Jeder Button und jede Tabelle werden von unserer Wahrnehmung
-                          als visuelle Einheit erkannt. Umgekehrt gilt: Wenn Dinge, die
-                           zusammengehören, in unterschiedlichen Kästen platziert oder durch
-                            Trennlinien abgegrenzt sind, ist es den Benutzern fast unmöglich,
-                             sie gemeinsam zu beachten. Dies gilt auch dann, wenn die Distanz
-                              gering oder die Ähnlichkeit groß ist.
-                       Wichtig ist, dass eine vollständige Geschlossenheit nicht erforderlich ist,
-                        damit das Gesetz wirkt. Es genügt bereits, wenn eine geschlossene Figur
-                         angedeutet wird. Das Gehirn ergänzt einfach die unvollständigen Formen.
+                       Aktionssequenzen sollten in Gruppen, mit einem Anfang, einer Mitte und einem Ende organisiert sein. Das informative Feedback nach der Vervollständigung einer Gruppe von Aktionen gibt dem Operator eine Erleichterung, eine Errungenschaft und das Signal, dass es möglich ist, die nächste Aktionssequenz zu beginnen.  .
                          </div>";
                                 }
 
@@ -98,26 +83,20 @@ if(isset($_GET["id"]) && $idurl == 1) {
   if(isset($_GET["id"]) && $idurl == 5) {
     
       
-  echo" <img src='Bilder\bild_frage5.png' style='height: 200px; margin-right: 0px; float:right;' alt='Es werden Kreise mit Klammern dargestellt. Eine Klammer öffnet sich und lässt ein wenig Weissraum, danach schließt sie wieder. Das wiederholt sich zwei weitere Male. Der Betrachter erkennt direkt die Mittelachsen durch die Kreise und die resultierende Symmetrie der Klammern'/>
-  <h1 style='text-align:left;'>Gesetz der Symmetrie</h1>
+  echo" 
+    <h1 style='text-align:left;'>Biete einfache Fehlerbehandlung</h1>
    <div style='width: 500px;'>
-   Bei den Gestaltgesetzen aus der Gestaltpsychologie hat das Gesetz der Symmetrie
-    eine besondere Rolle.
-    Symmetrisch angeordnete Elemente schaffen Strukturen und werden dadurch als
-     einander zugehörig wahrgenommen. Daher sehr wichtig: Elemente, die symmetrisch
-      angeordnet sind, werden als zusammengehörig angesehen.
+   Das Programm sollte immer so funktionieren, dass es dem Nutzer nicht möglich ist fatale Fehler zu begehen. Falls ein Fehler gemacht wurde, sollte das System diesen ermitteln und einfache, verständliche Lösungsmechanismen vorschlagen.
      </div>";
             }
             
             if(isset($_GET["id"]) && $idurl == 6) {
                 
                   
-              echo" <img src='Bilder\bild_frage2.jpg' style='height: 200px; margin-right: 0px; float:right;' alt='Sieben schwarze Kreise kommen ungeordnet im Raum vor. Darüber spannt sich ein Quader in weiß auf und wird erkennbar dadurch, dass jede Ecke jeweils durch einen Kreis hinterlegt ist. Nur die Ecken werden erkenntlich gemacht und man erkennt die Figur durch zusammenführen der Seiten. Der Quader ist eine Grundform, was bei diesem Gesetz wichtig ist, jeder muss die Figur kennen.'/>
-              <h1 style='text-align:left;'>Gesetz der guten Gestalt</h1>
+              echo" 
+                 <h1 style='text-align:left;'>Biete einfache Rücksetzmöglichkeiten</h1>
                <div style='width: 500px;'>
-               Das Gesetz der Einfachheit besagt, dass das menschliche Gehirn Formen so interpretiert, 
-               dass sie möglichst einfach erscheinen und leicht zu beschreiben sind.
-                Es wird auch als das Gesetz der guten Gestalt oder Prägnanzgesetz bezeichnet.
+               Diese Funktion erleichtert dem Nutzer die Fehlerbereinigung und ermuntert deshalb zum Ausprobieren von unbekannten Optionen.
                  </div>";
                         }
 
@@ -125,12 +104,10 @@ if(isset($_GET["id"]) && $idurl == 1) {
                         if(isset($_GET["id"]) && $idurl == 7) {
                             
                               
-                          echo" <img src='Bilder\bild_frage7.png' style='height: 200px; margin-right: 0px; float:right;' alt='Sieben schwarze Kreise kommen ungeordnet im Raum vor. Darüber spannt sich ein Quader in weiß auf und wird erkennbar dadurch, dass jede Ecke jeweils durch einen Kreis hinterlegt ist. Nur die Ecken werden erkenntlich gemacht und man erkennt die Figur durch zusammenführen der Seiten. Der Quader ist eine Grundform, was bei diesem Gesetz wichtig ist, jeder muss die Figur kennen.'/>
-                          <h1 style='text-align:left;'>Gesetz des gemeinsamen Schicksals</h1>
+                          echo" 
+                          <h1 style='text-align:left;'>Unterstütze benutzergesteuerten Dialog</h1>
                            <div style='width: 500px;'>
-                           Das Gesetz der Einfachheit besagt, dass das menschliche Gehirn Formen so interpretiert, 
-                           dass sie möglichst einfach erscheinen und leicht zu beschreiben sind.
-                            Es wird auch als das Gesetz der guten Gestalt oder Prägnanzgesetz bezeichnet.
+                           Erfahrene Nutzer sollten Aktionen initiieren, anstatt nur zu reagieren. Stattdessen soll das System auf ihre Aktionen reagieren.  So hat der Nutzer das Gefühl den Dialog im Griff zu haben. 
                              </div>";
                                     }
 
@@ -138,26 +115,12 @@ if(isset($_GET["id"]) && $idurl == 1) {
                                     if(isset($_GET["id"]) && $idurl == 8) {
                                         
                                           
-                                      echo" <img src='Bilder\bild_frage8.jpg' style='height: 200px; margin-right: 0px; float:right;' alt='Es werden Pfeile in jeweils drei Zeilen angeordnet. Die erste Zeile an Pfeilen zeigt in die rechte Richtung. Die zweite Zeile dann nach links und die letzte dritte wieder nach rechts. So sieht es aus, als würde jede Zeile dazu verdammt sein, eine Richtung zu gehen./>
-                                      <h1 style='text-align:left;'>Gesetz der Kontinuität</h1>
+                                      echo" 
+                                      <h1 style='text-align:left;'>Reduziere die Belastung des Kurzzeitgedächtnisses</h1>
                                        <div style='width: 500px;'>
-                                       Das Gesetz der Einfachheit besagt, dass das menschliche Gehirn Formen so interpretiert, 
-                                       dass sie möglichst einfach erscheinen und leicht zu beschreiben sind.
-                                        Es wird auch als das Gesetz der guten Gestalt oder Prägnanzgesetz bezeichnet.
+                                       Die Begrenzungen der menschlichen Informationsaufnahme des Kurzzeitgedächtnisses macht es sinnvoll, dass Anzeigen übersichtlich gehalten und reduziert sind. Sequenzen und Codes sollten eine hinreichende Trainingszeit haben.  
                                          </div>";
                                                 }
-                        
-                                                if(isset($_GET["id"]) && $idurl == 9) {
-                                                    
-                                                      
-                                                  echo" <img src='Bilder\bild_frage9.jpg' style='height: 200px; margin-right: 0px; float:right;' alt='Eine Linie kringelt sich durch das Bild und wird oben sowie unten angeschnitten. Sie hat also kein wahrnehmbares Ende oder Anfang.'/>
-                                                  <h1 style='text-align:left;'>Kontur</h1>
-                                                   <div style='width: 500px;'>
-                                                   Das Gesetz der Einfachheit besagt, dass das menschliche Gehirn Formen so interpretiert, 
-                                                   dass sie möglichst einfach erscheinen und leicht zu beschreiben sind.
-                                                    Es wird auch als das Gesetz der guten Gestalt oder Prägnanzgesetz bezeichnet.
-                                                     </div>";
-                                                            }
                                       
 
 echo "<div class='button-container'>";
