@@ -20,7 +20,7 @@
        <a class="logoLink" href="index.html"><img class ="logo" src="Bilder\logo1.png" alt="Design Profi Logo"/></a>
        
        
-        <p><a class="homebutton" href="info-Gestaltgesetz-startseite.html">Zurück zur Auswahl</a></p>
+        <p><a class="homebutton" href="info-Dialoggesetz-startseite.html">Zurück zur Auswahl</a></p>
 </div>
 </header>
 
@@ -34,19 +34,12 @@
 if(isset($_GET["id"]) && $idurl == 1) {
     
       
-  echo" <img src='Bilder\bild_frage3.jpg' style='height: 200px; margin-right: 0px; float:right;' alt='Es gibt fünf Zeilen und acht Spalten. Jede Zeile hat abwechselnd einen schwarzen Quader oder einen schwarzen Kreis. Also auf Platz eins ist ein Quader, Platz zwei besitzt einen Kreis, Platz drei wieder einen Quader und so weiter bis Platz acht. Ein Gatter aus regelmäßig angeordneten verschieden aussehenden Teilchen. Das Auge erkennt die Spalten durch die ähnlich aussehenden Elemente.'/>
+  echo" 
      <h1 style='text-align:left;'>Gesetz der Ähnlichkeit</h1>
-     
-   <div style='width: 500px;'>
-   Das Gesetz der Ähnlichkeit besagt, dass Dinge, die ähnlich gestaltet sind,
-    als zusammengehörig wahrgenommen werden. Dagegen werden Dinge, die sich 
-    in wichtigen Merkmalen unterscheiden, als voneinander getrennt oder unabhängig
-     wahrgenommen. <br> <br> Die Ähnlichkeit kann sich auf Merkmale wie Farbe, Form, Größe,
-      Helligkeit oder Orientierung beziehen. Je mehr Gemeinsamkeiten die Dinge 
-      aufweisen, desto stärker ist die Gruppierungstendenz in unserer Wahrnehmung.
-   Das Gesetz der Ähnlichkeit kann direkt aufs Webdesign übertragen werden. Die 
-   Elemente einer Website, die gleich aussehen und sich eindeutig von den anderen
-    unterscheiden, werden zu einer Gruppe zusammengeschlossen. </div>";
+   <div style='width: 500px;'>thjkerjhg
+    </div>
+    
+    ";
    
       }
       
@@ -194,6 +187,9 @@ $idurl2=$idurl-2;
 echo "<a class='zurueck2' href='gestaltgesetzeSeite.php?id=".$idurl2."'>zurück</a>";
 }
 
+if($idurl < 10) {
+   echo "<a class='weiter' href='gestaltgesetzeSeite.php?id=".$idurl."'>weiter</a>";
+}
 
 }
    
