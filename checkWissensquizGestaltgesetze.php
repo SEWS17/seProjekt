@@ -47,7 +47,7 @@ echo "<input type='radio' name='answer' value='".$row["AUSWAHL3"]."'";
 if(@$_POST['answer'] == $row["AUSWAHL3"]) {echo "checked";}
 echo ">".$row["AUSWAHL3"]."<br>";
 
-echo "<input style='margin-top:20px;' type='submit' name='auswahl' value='Abschicken'>";
+echo "<button style='margin-top:20px;' type='submit' name='auswahl' value='Abschicken'>Abschicken</button>";
 echo "</form>";
 
 $canswer = $row["KORREKTE_ANTWORT"];

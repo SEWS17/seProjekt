@@ -153,7 +153,7 @@ if(isset($_GET["id"]) && $idurl == 1) {
                                     if(isset($_GET["id"]) && $idurl == 8) {
                                         
                                           
-                                      echo" <img src='Bilder\bild_frage8.jpg' style='height: 200px; margin-right: 0px; float:right;' alt='Es werden Pfeile in jeweils drei Zeilen angeordnet. Die erste Zeile an Pfeilen zeigt in die rechte Richtung. Die zweite Zeile dann nach links und die letzte dritte wieder nach rechts. So sieht es aus, als würde jede Zeile dazu verdammt sein, eine Richtung zu gehen./>
+                                      echo" <img src='Bilder\bild_frage8.jpg' style='height: 200px; margin-right: 0px; float:right;' alt='Es werden Pfeile in jeweils drei Zeilen angeordnet. Die erste Zeile an Pfeilen zeigt in die rechte Richtung. Die zweite Zeile dann nach links und die letzte dritte wieder nach rechts. So sieht es aus, als würde jede Zeile dazu verdammt sein, eine Richtung zu gehen.'/>
                                       <h1 style='text-align:left;'>Gesetz der Kontinuität</h1>
                                        <div style='width: 500px;'>
                                        Das Gesetz der Einfachheit besagt, dass das menschliche Gehirn Formen so interpretiert, 
@@ -194,9 +194,6 @@ $idurl2=$idurl-2;
 echo "<a class='zurueck2' href='gestaltgesetzeSeite.php?id=".$idurl2."'>zurück</a>";
 }
 
-if($idurl < 10) {
-   echo "<a class='weiter' href='gestaltgesetzeSeite.php?id=".$idurl."'>weiter</a>";
-}
 
 }
    
