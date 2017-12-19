@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
             </style>";
             
             $type = "";
-            if(isset($_POST['Submit']) && $_POST['Submit'] == '0') {
+            if(isset($_POST['Submit']) && $_POST['Submit'] == '0' && !isset($_POST['luecke'])) {
                 $type = 'disabled';
             }
             
@@ -153,7 +153,7 @@ if ($result->num_rows > 0) {
                                     echo "<p class=\"".($fehler ? "error" : "ok")."\">$nachricht</p>";
                                     
                                     $punkte;
-                                    if($auswahlpunkte > 3) {
+                                    if($auswahlpunkte > 2) {
                                         $punkte = 1;
                                     } else {
                                         $punkte = 0;
