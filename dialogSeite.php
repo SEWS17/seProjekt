@@ -35,8 +35,9 @@ if(isset($_GET["id"]) && $idurl == 1) {
     
       
   echo" 
-     <h1 style='text-align:left;'>Gesetz der Ähnlichkeit</h1>
-   <div style='width: 500px;'>thjkerjhg
+     <h1 style='text-align:left;'>Versuche Konsistenz zu erreichen</h1>
+   <div style='width: 500px;'>
+   Konsistente Abfolgen von Aktionen sollten in ähnlichen Situationen angewandt werden. In Menüs und Fenstern sollte die gleiche Terminologie und gleiche Befehle verwendet werden. 
     </div>
     
     ";
@@ -45,16 +46,11 @@ if(isset($_GET["id"]) && $idurl == 1) {
       
       if(isset($_GET["id"]) && $idurl == 2) {
 
-    echo "<img src='Bilder\bild_frage4.png' style='height: 200px; margin-right: 0px; float:right;' alt='Links kommen mehrere Fische wirr im Raum vor. Auf der rechten Seite formiert sich ein Fischschwarm zu einem größeren Fisch, diese Fische sind sehr nah beieinander. Somit erkennt man den Schwarm nicht als einzelne Fische, sondern als neue Form.'/>
-     
-    <h1 style='text-align:left;'>Gesetz der Nähe</h1>";
+    echo "
+    <h1 style='text-align:left;'>Biete erfahrenen Nutzern Abkürzungen an</h1>";
 
     echo "<div style='width: 500px';>
-    Es besagt, dass gleiche Elemente (Elemente mit gleichem Reiz) mit geringeren
-     Abständen zueinander als zusammengehörig wahrgenommen werden.
-      In dieser Abbildung sehen wir links eine wilde Anordnung an
-       Fischen und rechts eine Einheit bildende. Wir nehmen diese Zusammengehörigkeit 
-       so wahr, weil die Elemente sich näher sind.
+    Mit erhöhter Häufigkeit der Nutzung eines Programmes steigt das Bedürfnis die Interaktionen zu minimieren. Ein erfahrener Nutzer wünscht sich Abkürzungen, Shortcuts und versteckte Befehle die die Interaktion beschleunigen.
     
     </div>";
 
@@ -65,14 +61,10 @@ if(isset($_GET["id"]) && $idurl == 1) {
         if(isset($_GET["id"]) && $idurl == 3) {
             
               
-          echo" <img src='Bilder\bild_frage6.png' style='height: 200px; margin-right: 0px; float:right;' alt='Durch viele Kreise wird eine Welle dargestellt. Erst steigt sie langsam an, hat einen Hochpunkt und fällt wieder mit Schwung. Es entsteht eine harmonische Bewegung in die Leserichtung und sieht gut aus'/>
-          <h1 style='text-align:left;'>Gesetz der guten Fortsetzung</h1>
+            echo" 
+            <h1 style='text-align:left;'>Biete informatives Feedback</h1>
            <div style='width: 500px;'>
-           Das Gesetz der guten Fortsetzung besagt, dass Elemente, 
-           die sich auf einer durchgehenden Linie oder Kurve befinden,
-            als Einheit wahrgenommen oder als zusammengehörig aufgefasst werden.
-             Das liegt daran, dass das Gehirn dazu neigt,
-            einen einmal erhaltenen Richtungsimpuls fortzusetzen.   
+           Für jede Aktion des Operators sollte es eine sichtbare Reaktion des Systems geben. Für häufige und kleine Änderungen kann die Reaktion moderat ausfallen, während für seltene und große Aktionen ein deutlicheres Feedback gezeigt werden sollte.
             </div>";
         }
 
