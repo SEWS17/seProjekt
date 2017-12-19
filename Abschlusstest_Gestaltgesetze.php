@@ -51,6 +51,7 @@
     } 
 
     mysqli_set_charset($aconn, 'utf8');
+    $bewertung = "";
 
     if(isset($_GET["action"]) && $_GET['action'] == "auswertung") {
         include_once ("checkAbschlusstestGestaltgesetzte.php");
@@ -69,7 +70,16 @@
                  
                 
                 if($sessionID == $row["sessionID"]) {
-                echo "Du hast ".$row["SUMpunkte"]." von " .$gespunkte. " Punkten erreicht.";
+                echo "<p><img src='Bilder/Trophäe.png' alt='Trophäe' width= 200px style = 'display:block; margin-left:auto; margin-right:auto;'></p>";
+                    if($row["SUMpunkte"]<4 && $row["SUMpunkte"]!= null) {
+                    $bewertung = "Das geht bestimmt noch besser!";
+                    } else if($row["SUMpunkte"]>3 && $row["SUMpunkte"]<7) {
+                    $bewertung = "Gratulation! Du hast ein gutes Ergebnis erreicht!";
+                    } else if($row["SUMpunkte"]>6) {
+                    $bewertung = "Herzlichen Glückwunsch! In dir steckt ein echter Design Profi!";
+                    }
+                echo "<h1 style = 'color:#3FAA34'>Du hast ".$row["SUMpunkte"]." von " .$gespunkte. " Punkten erreicht.</h1>";
+                echo "<h2 style = 'color:#3FAA34'>".$bewertung."</h2>";
                 }
                 
             }
