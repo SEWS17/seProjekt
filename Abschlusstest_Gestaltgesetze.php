@@ -36,24 +36,26 @@
     
     <?php
     session_start();
+    $sessionID = session_id();
+    
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "quiz";
+    
+    // Verbindung erstellen
+    $aconn = new mysqli($servername, $username, $password, $dbname);
+    // Verbindung überprüfen
+    if ($aconn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+
+    mysqli_set_charset($aconn, 'utf8');
+
     if(isset($_GET["action"]) && $_GET['action'] == "auswertung") {
         include_once ("checkAbschlusstestGestaltgesetzte.php");
         include_once ("checkAbschlussquizAuswahl.php");
-        // echo $list[0]['id'], " - ", $list[0]['1KORREKTE_ANTWORT'];
-        // echo $list[1]['id'], " - ", $list[1]['1KORREKTE_ANTWORT'];
-
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "quiz";
         
-        $aconn = new mysqli($servername, $username, $password, $dbname);
-        // Verbindung überprüfen
-        if ($aconn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
-        
-        mysqli_set_charset($aconn, 'utf8');
         
         $sqlauswertung = "SELECT Aufgabe, sessionID, punkte, gesamtpunkte, SUM(punkte) AS SUMpunkte FROM abschlusstest_gestaltgesetze_auswertung WHERE sessionID = '".$sessionID."'";
         $result = $conn->query($sqlauswertung);
@@ -87,11 +89,6 @@
         $idurl++;
      
 
-
-       
-   
-    //$idurl2--;
-
         if(isset($_GET["id"]) && $idurl < 10) {
             echo "<p><a class='weiter' href='Abschlusstest_Gestaltgesetze.php?id=".$idurl."'>weiter zu Frage $idurl</a></p>";
         } else {
@@ -107,7 +104,20 @@
     }
    
   
-  
+        $sqldelete = "";
+        if(isset($_GET["action"])) {
+            $action = (string) $_GET["action"];
+            if($action == "ende") {
+                $sqldelete = "DELETE FROM abschlusstest_gestaltgesetze_auswertung
+                WHERE sessionID = '".$sessionID."'";
+
+                if ($aconn->query($sqldelete) === TRUE) {
+            
+                } else {
+                    echo "Error: " . $sqldelete . "<br>" . $conn->error;
+                }
+            }
+        }
    
 
 

@@ -1,5 +1,6 @@
 <?php
-$sessionID = session_id();
+
+
 
 $servername = "localhost";
 $username = "root";
@@ -20,8 +21,7 @@ mysqli_set_charset($conn, 'utf8');
 $sql = "SELECT id, ATEXT, BILD1, BILD2, KORREKTE_ANTWORT FROM abschlusstest_auswahl_gestaltgesetze";
 $result = $conn->query($sql);
 
-// $check= "Du hast keine Antwort ausgewählt.";
-// $answer =(@$_POST['answer']);  
+ 
 $gesamtpunkte = 1;
 $check= "";
 $punkte = 0;
@@ -59,7 +59,7 @@ if ($result->num_rows > 0) {
             if(@$_POST['Kategorie'] == 'auswahl1') {echo "checked";}
             echo "> <img src='".$row["BILD1"]."'height='200px' width='360px';></label>";
 
-            echo "<label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'";
+            echo "<label><input type='radio'style='display:none;' name='Kategorie' value='auswahl2'";
             if(@$_POST['Kategorie'] == 'auswahl2') {echo "checked";}
             echo "> <img src='".$row["BILD2"]."'height='200px' width='360px';></label>";
 
@@ -116,20 +116,6 @@ if ($result->num_rows > 0) {
 
 }
 
-$sqldelete = "";
-if(isset($_GET["action"])) {
-    $action = (string) $_GET["action"];
-    if($action == "ende") {
-        $sqldelete = "DELETE FROM abschlusstest_gestaltgesetze_auswertung
-        WHERE sessionID = '".$sessionID."'";
-
-        if ($conn->query($sqldelete) === TRUE) {
-    
-        } else {
-            echo "Error: " . $sqldelete . "<br>" . $conn->error;
-        }
-    }
-}
 
 
 

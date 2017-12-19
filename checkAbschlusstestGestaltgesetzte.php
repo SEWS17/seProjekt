@@ -1,5 +1,4 @@
 <?php
-$sessionID = session_id();
 
 $servername = "localhost";
 $username = "root";
@@ -25,13 +24,6 @@ $luecke2 = "";
 $luecke3 = "";
 $luecke4 = "";
 $luecke5 = "";
-
-
-
-
-// $check= "Du hast keine Antwort ausgewählt.";
-// $answer =(@$_POST['answer']);
-
 
 
 if ($result->num_rows > 0) {
@@ -188,29 +180,6 @@ if ($result->num_rows > 0) {
                 } else {
                     echo "Es sind keine daten vorhanden!";
                 }
-
-                $sqldelete = "";
-                if(isset($_GET["action"])) {
-                    $action = (string) $_GET["action"];
-                    if($action == "ende") {
-                        $sqldelete = "DELETE FROM abschlusstest_gestaltgesetze_auswertung
-                        WHERE sessionID = '".$sessionID."'";
-               
-                        if ($conn->query($sqldelete) === TRUE) {
-                    
-                        } else {
-                            echo "Error: " . $sqldelete . "<br>" . $conn->error;
-                        }
-                    }
-                }
-
-
-                // $list = array();
-                // if($row =  $result->fetch_assoc()) {
-                // $list[] = $row;
-                // } else {
-                //     $list[] = "";
-                // }  
 
 
                     
