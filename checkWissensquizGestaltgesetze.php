@@ -17,8 +17,7 @@ if ($conn->connect_error) {
 
 mysqli_set_charset($conn, 'utf8');
 
-
-$sql = "SELECT id, Bild, Frage, KORREKTE_ANTWORT, AUSWAHL1, AUSWAHL2, AUSWAHL3 FROM wissensquiz_gestaltgesetze";
+$sql = "SELECT id, Bild, Frage, Bildbeschreibung, KORREKTE_ANTWORT, AUSWAHL1, AUSWAHL2, AUSWAHL3 FROM wissensquiz_gestaltgesetze";
 $result = $conn->query($sql);
 
 $check= "Du hast keine Antwort ausgewählt.";
@@ -31,8 +30,7 @@ if ($result->num_rows > 0) {
         //print_r($row);
         if($row["id"] == $_GET['id']) {
 
-
-echo "<img class= quizbild src='".$row["Bild"]."' alt='Bild Frage".$row["id"]."'/>";
+echo "<img class= quizbild src='".$row["Bild"]."' alt='".$row["Bildbeschreibung"]."'/>";
 echo "<h1 style='font-size:20px; font-weight:bold; text-align: left; '>Frage ".$row["id"].":</h1>";
 echo "<p style='font-size:17px; font-weight:bold; text-align: left; '>".$row["Frage"]."</p>";
 echo "<form method='post'>";
