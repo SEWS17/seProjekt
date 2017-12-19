@@ -184,8 +184,6 @@ CREATE TABLE `wissensquiz_dialoggestaltung` (
 -- Dumping data for table `wissensquiz_dialoggestaltung`
 --
 
-INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
-('1', 'logo.jpg', '1', '1', '1', '2', '1', '3');
 
 -- --------------------------------------------------------
 
