@@ -552,3 +552,11 @@ bottom:100px;
             float: right;
         }
         
+        .manualImage{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height:340px;
+            width:500px;
+        
+        }
