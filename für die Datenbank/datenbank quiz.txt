@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2017 at 01:38 PM
+-- Generation Time: Dec 19, 2017 at 07:06 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -23,12 +23,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `abschlusstest_auswahl_dialoggestaltung`
+--
+
+CREATE TABLE `abschlusstest_auswahl_dialoggestaltung` (
+  `id` int(11) NOT NULL,
+  `ATEXT` varchar(900) NOT NULL,
+  `BILD1` char(100) NOT NULL,
+  `Bildbeschreibung1` text NOT NULL,
+  `BILD2` char(100) NOT NULL,
+  `Bildbeschreibung2` text NOT NULL,
+  `KORREKTE_ANTWORT` char(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `abschlusstest_auswahl_dialoggestaltung`
+--
+
+INSERT INTO `abschlusstest_auswahl_dialoggestaltung` (`id`, `ATEXT`, `BILD1`, `Bildbeschreibung1`, `BILD2`, `Bildbeschreibung2`, `KORREKTE_ANTWORT`) VALUES
+(1, 'Zur Erwartungskonformität gehört es, dass sich schnell erblicken lässt, worum es sich handelt. Der Benutzer soll sich nicht lange aufhalten, um zu verstehen, was er für Funktionen vor sich hat. Er darf intuitiv geleitet werden, vor allem visuell, um sein Ziel zu erreichen.\r\nBei welchem Bild werden die Erwartungen des Users erfüllt?', 'Bilder/dialoggestaltungFRAGEN/erwartungskonformBAD.png', 'Man sieht eine Drop Down Liste von Schriftarten. Die einzelnen Fonts sich so dargestellt, wie sie auch verwendet aussehen würden, ob fett, kursiv oder konstruiert oder als Handschrift.', 'Bilder/dialoggestaltungFRAGEN/erwartungskonformGOOD.png', 'In diesem Bild sieht man eine veraltete Version eines Programms. Die Schriftarten werden auch aus der Symbolleiste herausgeklappt. Diese werden in der selben Schriftart dargestellt, so dass alle gleich aussehen.', 'auswahl2'),
+(3, 'Eine Software mit optimaler Fehlertoleranz zeichnet sich dadurch aus, dass Fehler erstmal angezeigt werden. Demnach muss eine Funktion gegeben sein, die der Benutzer aufrufen, bzw. auch abstellen kann. Diese darf dann Fehler aufführen und Vorschläge zur Behebung machen. \r\nWo werden die Fehler optimal aufgeführt?', 'Bilder/dialoggestaltungFRAGEN/fehlertoleranzBAD.gif', 'Das Bild zeigt eine Symbolleiste und ein Drop Down Menü des Punktes „File“. Die gesamte Leiste enthält keine Aufführung einer Fehlersuchfunktion. Das aufgeklappte Menü zeigt auch keine Möglichkeit wieder zurück zu schreiten oder vorwärts. ', 'Bilder/dialoggestaltungFRAGEN/fehlertoleranzGOOD.png', 'Diese Abbildung zeigt eine Fehlermeldung beim Anmelden eines Benutzerkontos. Es wird in rot verdeutlicht, dass es sich um eine Sperrung handelt, danach der Name, mit dem versucht wurde, sich anzumelden, in fett gedruckt. Dann führt das Programm auf, welche Gründe hierfür möglich sind und deren Lösungswege, verlinkt und in blauer Farbe.)', 'auswahl2'),
+(5, 'Es gibt Programme, bei denen es gegeben sein muss, dass der User sich seine Funktionen selber einrichten kann. Jeder arbeitet individuell, um an sein Ziel zu kommen. Demnach muss beachtet werden, dass Tools oder Symbolleisten verstellbar sind.\r\nBei welchem Beispiel lassen sich Tools selbst einrichten?\r\n', 'Bilder/dialoggestaltungFRAGEN/individualisierbarkeitGOOD2.jpg', 'In diesem Bild wird der Punkt „Ansicht“ aus einer Symbolleiste ausgeklappt. In dem Menü der Ansicht lässt sich durch Häkchen erschließen, welche Fenster schon geöffnet sind. Weitere Fenster lassen sich demnach durch Klicken zusätzlich öffnen und zur Verwendung bereitstellen.)', 'Bilder/dialoggestaltungFRAGEN/individualisierbarkeitBAD.png', 'Die Abbildung zeigt ein Browserfenster mit starrer Symbolleiste und Tab-Leiste. Heutzutage lassen diese sich verschieben, aber bei dieser Version gehen wir einmal von aus, das ginge nicht Zusätzlich gibt es ein Anwendungsmenü, welches vorgefertigte, unveränderbare Tools enthält.', 'auswahl1'),
+(7, 'Bei einer guten Selbstbeschreibungsfähigkeit eines Systems fällt die Notwendigkeit auf ein Handbuch weg. Das heißt nächste Dialogschritte sind selbsterklärend und der User wird über geforderte Eingaben informiert.\r\nWelches Beispiel verhindert eine falsche Eingabe?', 'Bilder/dialoggestaltungFRAGEN/selbstbeschreibungsfähigkeitGOOD.jpg', 'Auf einem Desktop wird angezeigt, wie der Benutzer versucht, einen Dateinamen zu ändern. Das System erzeugt eine Sprechblase, in der erlaubte Zeichen aufgeführt werden.', 'Bilder/dialoggestaltungFRAGEN/selbstbeschreibungsfähigkeitBAD1.png', 'Dieses Bild zeigt zwei Dateien auf einem Desktop. Man sieht die Dateinamen, jedoch keinen Dateitypen. Wären es nun zwei Bilder, wäre nicht nachvollziehbar, ob es sich um ein Jpeg oder Png handele.', 'auswahl1');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `abschlusstest_auswahl_gestaltgesetze`
 --
 
 CREATE TABLE `abschlusstest_auswahl_gestaltgesetze` (
   `id` int(11) NOT NULL,
   `ATEXT` varchar(900) NOT NULL,
+  `BildBeschreibung` varchar(1000) NOT NULL,
+  `BildBeschreibung2` varchar(1000) NOT NULL,
   `BILD1` char(50) NOT NULL,
   `BILD2` char(50) NOT NULL,
   `KORREKTE_ANTWORT` char(50) NOT NULL
@@ -38,12 +66,36 @@ CREATE TABLE `abschlusstest_auswahl_gestaltgesetze` (
 -- Dumping data for table `abschlusstest_auswahl_gestaltgesetze`
 --
 
-INSERT INTO `abschlusstest_auswahl_gestaltgesetze` (`id`, `ATEXT`, `BILD1`, `BILD2`, `KORREKTE_ANTWORT`) VALUES
-(1, 'Das Gesetz der Nähe ist das einfachste Gestaltgesetz - was nicht so zu verstehen ist, es sei damit auch das unwichtigste. Verstöße gegen das Gesetz der Nähe können verheerende Auswirkungen auf die Verständlichkeit einer Website oder Benutzeroberfläche haben. Das betrifft nicht nur Buttons und Grafiken, sondern auch das Layout von Texten bzw. Links. Wie kann man sich einen solchen "Verstoß" vorstellen? Bitte wähle in diesem Beispiel wie das Gesetz der Nähe nicht(!) verstanden wird!', 'Bilder/GdNaehe.png', 'Bilder/GdNaehe2.png', 'auswahl1'),
-(3, 'In der Praxis ist das Gesetz der Geschlossenheit besonders interessant, wenn viele Informationen angezeigt werden müssen, die sich auf mehrere Oberbegriffe oder Überschriften verteilen. Betrachten hierzu die zwei Screenshots einer Wettervorhersage auf einer Webseite. Welche Abbildung zeigt das Gesetz der Geschlossenheit am ehesten?', 'Bilder/GdGeschlossenheit.gif', 'Bilder/GdGeschlossenheit2.gif', 'auswahl2'),
-(5, 'Das Gesetz der guten Fortsetzung ist wichtig bei der Ausrichtung von Elementen und spielt im Webdesign eine große Rolle. Alle Elemente sollten an Fluchtlinien ausgerichtet sein. Durch Alignierung lässt sich die Anzahl der Fluchtlinien verringern, was für eine übersichtlichere und geordnetere Darstellung sorgt. Die Folgenden Bilder zeigen zum einen Links die wie in einem Fließtext umgebrochen sind und Menüpunkte einer Navigation. Welches dieser zwei Beispiele zeigt das Gesetz der guten Fortsetzung am ehesten?', 'Bilder/GdFortsetzung1.gif', 'Bilder/GdFortsetzung22.gif', 'auswahl2'),
-(7, 'Wir bekommen durch das Gesetz der Symmetrie (und natürlich dessen Anwendung) mehr Ordnung und Übersicht in unsere Website. Und das Design der Website wirkt harmonischer.\r\n\r\n\r\n\r\nAuf dieser Seite sollen die Produktboxen besonders hervorgehoben werden, welches dieser zwei Beispiele weist das Gesetz der Symmetrie auf?', 'Bilder/Gdsymmetrie2.jpeg', 'Bilder/Gdsymmetrie.jpeg', 'auswahl2'),
-(9, 'Das Gesetz der Kontur ist kontrastbehaftet. Werden beispielsweise Bilder verwendet, um einen Header darzustellen, werden Konturen ausgelassen, um Worte abzubilden. Das Gesetz wird auch das „Gesetz der Innenseite“ genannt, also alles was Konturen bekommt, sei es ein Rahmen, oder eben im Beispiel davor, das Bild im Header.\r\n\r\nNachfolgend sind 2 Beispiele von verschiedene Webseiten abgebildet. Welches Beispiel zeigt den wahren design profi?', 'Bilder/kontur1.jpeg', 'Bilder/kontur.png', 'auswahl2');
+INSERT INTO `abschlusstest_auswahl_gestaltgesetze` (`id`, `ATEXT`, `BildBeschreibung`, `BildBeschreibung2`, `BILD1`, `BILD2`, `KORREKTE_ANTWORT`) VALUES
+(1, 'Das Gesetz der Nähe ist das einfachste Gestaltgesetz - was nicht so zu verstehen ist, es sei damit auch das unwichtigste. Verstöße gegen das Gesetz der Nähe können verheerende Auswirkungen auf die Verständlichkeit einer Website oder Benutzeroberfläche haben. Das betrifft nicht nur Buttons und Grafiken, sondern auch das Layout von Texten bzw. Links. Wie kann man sich einen solchen "Verstoß" vorstellen? Bitte wähle in diesem Beispiel wie das Gesetz der Nähe nicht(!) verstanden wird!', 'Das Bild zeigt eine Liste von Links. Diese haben noch Unterkategorien und stehen direkt daruntergeschrieben. Dann erfolgt ein wenig Platz zum nächsten Link.', 'Das zweite Bild stellt die Links direkt untereinander geschrieben dar. Kein Weißraum und kein Platz, sehr ungeordnet, werden allerdings mit einem Rahmen verziert.', 'Bilder/GdNaehe.png', 'Bilder/GdNaehe2.png', 'auswahl1'),
+(3, 'In der Praxis ist das Gesetz der Geschlossenheit besonders interessant, wenn viele Informationen angezeigt werden müssen, die sich auf mehrere Oberbegriffe oder Überschriften verteilen. Betrachten hierzu die zwei Screenshots einer Wettervorhersage auf einer Webseite. Welche Abbildung zeigt das Gesetz der Geschlossenheit am ehesten?', 'Das erste Bild zeigt Wetter-Icons nebeneinander gestellt, ohne Abgrenzung zueinander.', 'Das zweite Bild zeigt die Wetter-Icons nebeneinander gestellt, jedoch einzeln umrahmt.', 'Bilder/GdGeschlossenheit.gif', 'Bilder/GdGeschlossenheit2.gif', 'auswahl2'),
+(5, 'Das Gesetz der guten Fortsetzung ist wichtig bei der Ausrichtung von Elementen und spielt im Webdesign eine große Rolle. Alle Elemente sollten an Fluchtlinien ausgerichtet sein. Durch Alignierung lässt sich die Anzahl der Fluchtlinien verringern, was für eine übersichtlichere und geordnetere Darstellung sorgt. Die Folgenden Bilder zeigen zum einen Links die wie in einem Fließtext umgebrochen sind und Menüpunkte einer Navigation. Welches dieser zwei Beispiele zeigt das Gesetz der guten Fortsetzung am ehesten?', 'Im ersten Bild wird ein Block dargestellt, der eine Überschrift enthält. Darunter werden Wörter aufgelistet, die durch Kommas getrennt werden. Eine Kontur umschließt den gesamten Inhalt.', 'Im zweiten Bild werden die gleichen Wörter aufgelistet, jedoch getrennt voneinander durch ihre Darstellung. Das heißt die Worte werden anhand von Achsen aufgereiht und haben einen Zeilenumbruch. Viel Weißraum entsteht zwischen den Worten und unterhalb, somit sind keine Kommas notwendig. Die Ordnung hält sich an ein Gesetz.', 'Bilder/GdFortsetzung1.gif', 'Bilder/GdFortsetzung22.gif', 'auswahl2'),
+(7, 'Wir bekommen durch das Gesetz der Symmetrie (und natürlich dessen Anwendung) mehr Ordnung und Übersicht in unsere Website. Und das Design der Website wirkt harmonischer.\r\n\r\n\r\n\r\nAuf dieser Seite sollen die Produktboxen besonders hervorgehoben werden, welches dieser zwei Beispiele weist das Gesetz der Symmetrie auf?', 'Im ersten Bild werden Bücher nebeneinander angereiht. Also vier gleiche Exemplare, die auf dem selben Niveau angeordnet sind.', 'In diesem Bild werden die selben Bücher dargestellt, nur willkürlich auf dem Hintergrund verteilt.', 'Bilder/Gdsymmetrie2.jpeg', 'Bilder/Gdsymmetrie.jpeg', 'auswahl2'),
+(9, 'Das Gesetz der Kontur ist kontrastbehaftet. Werden beispielsweise Bilder verwendet, um einen Header darzustellen, werden Konturen ausgelassen, um Worte abzubilden. Das Gesetz wird auch das „Gesetz der Innenseite“ genannt, also alles was Konturen bekommt, sei es ein Rahmen, oder eben im Beispiel davor, das Bild im Header.\r\n\r\nNachfolgend sind 2 Beispiele von verschiedene Webseiten abgebildet. Welches Beispiel zeigt den wahren design profi?', 'Das Bild zeigt eine wunderschön gestaltete Navigationsleiste anhand einer Fotografie. Der beinhaltende Text, sowie der Button sind im selben weiß wie der Hintergrund des Bodies. So entsteht durch das Bild eine Umrahmung des Texts.', 'Im zweiten Bild sieht man Mark''s Webseite. Diese ist schlicht hässlich und nicht benutzergerecht gestaltet. Sie ist grau und beinhaltet eine Tabelle aus den 90''ern. Die Navileiste ist einfach weiß und mit schwarzen Text ausgestattet, wobei der Body die Farbe grau aufweist. Dieses Design ist eine schändliche Grabstätte für Gestalterherzen.', 'Bilder/kontur1.jpeg', 'Bilder/kontur.png', 'auswahl2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abschlusstest_dialoggestaltung_auswertung`
+--
+
+CREATE TABLE `abschlusstest_dialoggestaltung_auswertung` (
+  `Aufgabe` int(11) NOT NULL,
+  `sessionID` char(200) NOT NULL,
+  `punkte` int(11) NOT NULL,
+  `gesamtpunkte` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `abschlusstest_dialoggestaltung_auswertung`
+--
+
+INSERT INTO `abschlusstest_dialoggestaltung_auswertung` (`Aufgabe`, `sessionID`, `punkte`, `gesamtpunkte`) VALUES
+(1, '5drm7kom9gj6e9901g973fq243', 1, 1),
+(2, '5drm7kom9gj6e9901g973fq243', 0, 1),
+(5, '5drm7kom9gj6e9901g973fq243', 0, 1),
+(7, '5drm7kom9gj6e9901g973fq243', 1, 1),
+(8, '5drm7kom9gj6e9901g973fq243', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -63,10 +115,52 @@ CREATE TABLE `abschlusstest_gestaltgesetze_auswertung` (
 --
 
 INSERT INTO `abschlusstest_gestaltgesetze_auswertung` (`Aufgabe`, `sessionID`, `punkte`, `gesamtpunkte`) VALUES
-(1, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(1, 'qcuda6hgon0jn5cpg8dcek0ep1', 0, 1),
+(2, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(3, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(4, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
 (5, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(6, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
 (7, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
+(8, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1),
 (9, 'qcuda6hgon0jn5cpg8dcek0ep1', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abschlusstest_lückentext_dialoggesetze`
+--
+
+CREATE TABLE `abschlusstest_lückentext_dialoggesetze` (
+  `id` int(11) NOT NULL,
+  `Aufgabe` char(100) NOT NULL,
+  `TEXT1` char(200) NOT NULL,
+  `1AUSWAHL1` char(50) NOT NULL,
+  `1AUSWAHL2` char(50) NOT NULL,
+  `1AUSWAHL3` char(50) NOT NULL,
+  `1KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT2` char(200) NOT NULL,
+  `2AUSWAHL1` char(50) NOT NULL,
+  `2AUSWAHL2` char(50) NOT NULL,
+  `2AUSWAHL3` char(50) NOT NULL,
+  `2KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT3` char(200) NOT NULL,
+  `3AUSWAHL1` char(50) NOT NULL,
+  `3AUSWAHL2` char(50) NOT NULL,
+  `3AUSWAHL3` char(50) NOT NULL,
+  `3KORREKTE_ANTWORT` char(50) NOT NULL,
+  `TEXT4` char(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `abschlusstest_lückentext_dialoggesetze`
+--
+
+INSERT INTO `abschlusstest_lückentext_dialoggesetze` (`id`, `Aufgabe`, `TEXT1`, `1AUSWAHL1`, `1AUSWAHL2`, `1AUSWAHL3`, `1KORREKTE_ANTWORT`, `TEXT2`, `2AUSWAHL1`, `2AUSWAHL2`, `2AUSWAHL3`, `2KORREKTE_ANTWORT`, `TEXT3`, `3AUSWAHL1`, `3AUSWAHL2`, `3AUSWAHL3`, `3KORREKTE_ANTWORT`, `TEXT4`) VALUES
+(2, 'Bitte fülle den Lückentext aus!', 'Das Programm sollte immer so funktionieren, dass es dem Nutzer', 'immer', 'nicht', 'plötzlich', 'nicht', 'möglich ist fatale Fehler zu begehen. Falls ein Fehler gemacht wurde, sollte das System diesen', 'ignorieren', 'löschen', 'ermitteln', 'ermitteln', 'und einfache, verständliche Lösungsmechanismen vorschlagen. Das besagt das Gestaltungsgesetz: „Biete einfache', 'Kommunikation', 'Rücksetzungsmöglichkeiten', 'Fehlerbehandlung', 'Fehlerbehandlung', '“.'),
+(4, 'Bitte fülle den Lückentext aus!', 'Die', 'Unendlichkeit', 'Begrenzung', 'Raumwerte', 'Begrenzung', 'der menschlichen Informationsaufnahme des Kurzzeitgedächtnisses macht es sinnvoll, dass Anzeigen übersichtlich gehalten und reduziert sind. Sequenzen und Codes sollten eine hinreichende', 'Reichweite', 'Trainingszeit', 'Grundeinstellung', 'Trainingszeit', 'haben. Deshalb sollten Informationen', 'niemals', 'immer', 'manchmal', 'immer', 'in gedächtnisgerechten Mengen zugeführt werden.'),
+(6, 'Bitte fülle den Lückentext aus!', 'Mit erhöhter', 'Häufigkeit', 'Intelligenz', 'Seltenheit', 'Seltenheit', 'der Nutzung eines Programmes steigt das Bedürfnis die Interaktionen zu minimieren. Ein erfahrener Nutzer wünscht sich Abkürzungen, Shortcuts und versteckte', 'Überraschungen', 'Anforderungen', 'Befehle', 'Befehle', ', die die Interaktion beschleunigen. Biete', 'neuen', 'erfahrenen', 'klugen', 'erfahrenen', 'Nutzern Abkürzungen an.'),
+(8, 'Bitte fülle den Lückentext aus!', 'Die acht goldenen Regeln des Dialogdesigns wurden von Ben', 'Shneidermann', 'Schneider', 'Smith', 'Shneidermann', ' entwickelt.', '1999', '1978', '1986', '1986', 'kamen sie erstmals in seinem Buch “Designing the User Interface: Strategies for Effective Human-Computer-', 'Connections', 'Replacement', 'Interaction', 'Interaction', '” vor.');
 
 -- --------------------------------------------------------
 
@@ -117,54 +211,6 @@ INSERT INTO `abschlusstest_lückentext_gestaltgesetze` (`id`, `Aufgabe`, `TEXT1`
 
 -- --------------------------------------------------------
 
--- --------------------------------------------------------
-
---
--- Table structure for table `abschlusstest_lückentext_dialoggesetze`
---
-
-CREATE TABLE `abschlusstest_lückentext_dialoggesetze` (
-  `id` int(11) NOT NULL,
-  `Aufgabe` char(100) NOT NULL,
-  `TEXT1` char(200) NOT NULL,
-  `1AUSWAHL1` char(50) NOT NULL,
-  `1AUSWAHL2` char(50) NOT NULL,
-  `1AUSWAHL3` char(50) NOT NULL,
-  `1KORREKTE_ANTWORT` char(50) NOT NULL,
-  `TEXT2` char(200) NOT NULL,
-  `2AUSWAHL1` char(50) NOT NULL,
-  `2AUSWAHL2` char(50) NOT NULL,
-  `2AUSWAHL3` char(50) NOT NULL,
-  `2KORREKTE_ANTWORT` char(50) NOT NULL,
-  `TEXT3` char(200) NOT NULL,
-  `3AUSWAHL1` char(50) NOT NULL,
-  `3AUSWAHL2` char(50) NOT NULL,
-  `3AUSWAHL3` char(50) NOT NULL,
-  `3KORREKTE_ANTWORT` char(50) NOT NULL,
-  `TEXT4` char(200) NOT NULL,
-  `4AUSWAHL1` char(50) NOT NULL,
-  `4AUSWAHL2` char(50) NOT NULL,
-  `4AUSWAHL3` char(50) NOT NULL,
-  `4KORREKTE_ANTWORT` char(50) NOT NULL,
-  `TEXT5` char(200) NOT NULL,
-  `5AUSWAHL1` char(50) NOT NULL,
-  `5AUSWAHL2` char(50) NOT NULL,
-  `5AUSWAHL3` char(50) NOT NULL,
-  `5KORREKTE_ANTWORT` char(50) NOT NULL,
-  `TEXT6` char(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `abschlusstest_lückentext_dialoggesetze`
---
-
-INSERT INTO `abschlusstest_lückentext_dialoggesetze` (`id`, `Aufgabe`, `TEXT1`, `1AUSWAHL1`, `1AUSWAHL2`, `1AUSWAHL3`, `1KORREKTE_ANTWORT`, `TEXT2`, `2AUSWAHL1`, `2AUSWAHL2`, `2AUSWAHL3`, `2KORREKTE_ANTWORT`, `TEXT3`, `3AUSWAHL1`, `3AUSWAHL2`, `3AUSWAHL3`, `3KORREKTE_ANTWORT`, `TEXT4`, `4AUSWAHL1`, `4AUSWAHL2`, `4AUSWAHL3`, `4KORREKTE_ANTWORT`, `TEXT5`, `5AUSWAHL1`, `5AUSWAHL2`, `5AUSWAHL3`, `5KORREKTE_ANTWORT`, `TEXT6`) VALUES
-(2, 'Bitte fülle den Lückentext aus!', 'Das Programm sollte immer so funktionieren, dass es dem Nutzer ', 'immer', 'nicht', 'plötzlich', 'nicht', 'möglich ist fatale Fehler zu begehen. Falls ein Fehler gemacht wurde, sollte das System diesen ', 'ignorieren','löschen','ermitteln','ermitteln',' und einfache, verständliche Lösungsmechanismen vorschlagen. Das besagt das Gestaltungsgesetz: „Biete einfache ', 'Kommunikation','Rücksetzungsmöglichkeiten','Fehlerbehandlung','Fehlerbehandlung','“.', '', '', '', '', '', '', '', '', '', ''),
-(4, 'Bitte fülle den Lückentext aus!', 'Die', 'Unendlichkeit', 'Begrenzung', 'Raumwerte', 'Begrenzung', ' der menschlichen Informationsaufnahme des Kurzzeitgedächtnisses macht es sinnvoll, dass Anzeigen übersichtlich gehalten und reduziert sind. Sequenzen und Codes sollten eine hinreichende ', 'Reichweite', 'Trainingszeit', 'Grundeinstellung', 'Trainingszeit', 'haben. Deshalb sollten Informationen', 'niemals', 'immer', 'manchmal', 'immer', 'in gedächtnisgerechten Mengen zugeführt werden.', '', '', '', '', '', '', '', '', '', ''),
-(6, 'Bitte fülle den Lückentext aus!', 'Mit erhöhter ', 'Häufigkeit', 'Intelligenz', 'Seltenheit', 'Seltenheit', ' der Nutzung eines Programmes steigt das Bedürfnis die Interaktionen zu minimieren. Ein erfahrener Nutzer wünscht sich Abkürzungen, Shortcuts und versteckte ', 'Überraschungen', 'Anforderungen', 'befehle', 'Befehle', '), die die Interaktion beschleunigen. Biete ', 'neuen', 'erfahrenen', 'klugen', 'erfahrenen', 'Nutzern Abkürzungen an.', '', '', '', '', '', '', '', '', '', ''),
-(8, 'Bitte fülle den Lückentext aus!', 'Die acht goldenen Regeln des Dialogdesigns wurden von Ben ', 'Shneidermann', 'Schneider', 'Smith', 'Shneidermann', ' entwickelt.', '1999', '1978', '1986', '1986', ') kamen sie erstmals in seinem Buch “Designing the User Interface: Strategies for Effective Human-Computer-', 'Connections', 'Replacement', 'Interaction', 'Interaction', '” vor.', '', '', '', '', '', '', '', '', '', '');
-
--- --------------------------------------------------------
 --
 -- Table structure for table `wissensquiz_dialoggestaltung`
 --
@@ -173,7 +219,7 @@ CREATE TABLE `wissensquiz_dialoggestaltung` (
   `id` char(50) NOT NULL,
   `Bild` char(50) NOT NULL,
   `Bildbeschreibung` varchar(100) NOT NULL,
-  `Frage` char(50) NOT NULL,
+  `Frage` char(100) NOT NULL,
   `KORREKTE_ANTWORT` char(50) NOT NULL,
   `AUSWAHL1` char(50) NOT NULL,
   `AUSWAHL2` char(50) NOT NULL,
@@ -187,18 +233,13 @@ CREATE TABLE `wissensquiz_dialoggestaltung` (
 INSERT INTO `wissensquiz_dialoggestaltung` (`id`, `Bild`, `Bildbeschreibung`, `Frage`, `KORREKTE_ANTWORT`, `AUSWAHL1`, `AUSWAHL2`, `AUSWAHL3`) VALUES
 ('1', 'Bilder/DQuiz1.jpg', 'Ein Installationsfenster bietet die Möglichkeit an, das Setup abzubrechen, fortzufahren oder den Rec', 'Welches Dialoggesetz wird hier abgebildet?', 'Dialoge sollten abgeschlossen sein.', 'Dialoge sollten abgeschlossen sein.', 'Versuche Konsistenz zu erreichen.', 'Biete erfahrenen Nutzern Abkürzungen an.'),
 ('2', 'Bilder/DQuiz2.jpg', 'Die Grafik zeigt verschiedene Reiter eines Programmes. Einer dieser Reiter ist ausgeklappt und biete', 'Welches Gesetz ist zu erkennen?', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Biete informatives Feedback.'),
-('3', 'Bilder/DQuiz3.jpg', 'Ein Fenster zeigt an, dass es unmöglich ist eine Datei mit Sonderzeichen im Namen abzuspeichern.', 'Benenne das dargestellte Dialoggesetz', 'Biete einfache Fehlerbehandlung.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete einfache Fehlerbehandlung.'),
+('3', 'Bilder/DQuiz3.jpg', 'Ein Fenster zeigt an, dass es unmöglich ist eine Datei mit Sonderzeichen im Namen abzuspeichern.', 'Benenne das dargestellte Dialoggesetz!', 'Biete einfache Fehlerbehandlung.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Dialoge sollten abgeschlossen sein.', 'Biete einfache Fehlerbehandlung.'),
 ('4', 'Bilder/DQuiz4.jpg', 'Das Bild zeigt ein Installationsfenster, der Nutzer muss bestätigen, dass er mit der Installation fo', 'Welches Gesetz wird hier klar gezeigt?', 'Unterstütze benutzergesteuerten Dialog.', 'Unterstütze benutzergesteuerten Dialog.', 'Biete informatives Feedback.', 'Biete einfache Fehlerbehandlung.'),
-('5', 'Bilder/DQuiz5.jpg', 'Eine unübersichtliche Webseite ist zu erkennen, die mit vielen Farben, verschiedenen Fonts und keine', 'Welches Gesetz wurde hier offensichtlich nicht bea', 'Reduziere die Belastung des Kurzzeitgedächtnisses.', 'Dialoge sollten abgeschlossen sein.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Reduziere die Belastung des Kurzzeitgedächtnisses.'),
+('5', 'Bilder/DQuiz5.jpg', 'Eine unübersichtliche Webseite ist zu erkennen, die mit vielen Farben, verschiedenen Fonts und keine', 'Welches Gesetz wurde hier offensichtlich nicht beachtet?', 'Reduziere die Belastung des Kurzzeitgedächtnisses.', 'Dialoge sollten abgeschlossen sein.', 'Biete erfahrenen Nutzern Abkürzungen an.', 'Reduziere die Belastung des Kurzzeitgedächtnisses.'),
 ('6', 'Bilder/DQuiz6.jpg', 'Ein nach Links weisender Pfeil-Icon ist angewählt.', 'Wie lautet das dargestellte Gesetz?', 'Biete einfache Rücksetzmöglichkeiten.', 'Unterstütze benutzergesteuerten Dialog.', 'Biete informatives Feedback.', 'Biete einfache Rücksetzmöglichkeiten.'),
 ('7', 'Bilder/DQuiz7.jpg', 'Eine überladene Webseite bewirbt zu verkaufende Produkte, die nach keinem erkennbaren Muster angeord', 'Welches Dialoggesetz missachtet diese Webseite?', 'Versuche Konsistenz zu erreichen.', 'Biete einfache Fehlerbehandlung.', 'Versuche Konsistenz zu erreichen.', 'Dialoge sollten abgeschlossen sein.'),
-('8', 'Bilder/DQuiz8.jpg', 'Eine Fehlermeldung zeigt an: Geben sie mindestens einen Empfänger an.', 'Um welches Gesetz der Dialoggestaltung handelt es', 'Biete informatives Feedback.', 'Biete informatives Feedback.', 'Versuche Konsistenz zu erreichen.', 'Biete erfahrenen Nutzern Abkürzungen an.');
+('8', 'Bilder/DQuiz8.jpg', 'Eine Fehlermeldung zeigt an: Geben sie mindestens einen Empfänger an.', 'Um welches Gesetz der Dialoggestaltung handelt es sich?', 'Biete informatives Feedback.', 'Biete informatives Feedback.', 'Versuche Konsistenz zu erreichen.', 'Biete erfahrenen Nutzern Abkürzungen an.');
 
---
--- Indizes der exportierten Tabellen
---
-
---
 -- --------------------------------------------------------
 
 --
@@ -236,16 +277,34 @@ INSERT INTO `wissensquiz_gestaltgesetze` (`id`, `Bild`, `Bildbeschreibung`, `Fra
 --
 
 --
+-- Indexes for table `abschlusstest_auswahl_dialoggestaltung`
+--
+ALTER TABLE `abschlusstest_auswahl_dialoggestaltung`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `abschlusstest_auswahl_gestaltgesetze`
 --
 ALTER TABLE `abschlusstest_auswahl_gestaltgesetze`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `abschlusstest_dialoggestaltung_auswertung`
+--
+ALTER TABLE `abschlusstest_dialoggestaltung_auswertung`
+  ADD UNIQUE KEY `Aufgabe` (`Aufgabe`,`sessionID`);
+
+--
 -- Indexes for table `abschlusstest_gestaltgesetze_auswertung`
 --
 ALTER TABLE `abschlusstest_gestaltgesetze_auswertung`
   ADD UNIQUE KEY `Aufgabe` (`Aufgabe`,`sessionID`);
+
+--
+-- Indexes for table `abschlusstest_lückentext_dialoggesetze`
+--
+ALTER TABLE `abschlusstest_lückentext_dialoggesetze`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `abschlusstest_lückentext_gestaltgesetze`
