@@ -83,7 +83,26 @@
             
         }
 
-        
+        .AuswahlButton{
+            
+                    
+                        border-radius:5px;
+                        font-size:30px;
+                        font-family:calibri;
+                        color:white;
+                        border-style: solid; 
+                        border-color:green;
+                        background-color:#3FAA34;
+                        text-decoration:none;
+                        padding: 15px 32px;
+                        width: 250px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                    }
+        .AuswertungÜberschrift {
+                    margin-top: 200px;
+        }
             
         .startButton:hover, .startButton:active {
             background-color:white;
@@ -110,9 +129,40 @@
         a.logoLink {
 
 padding:0;
-
-
         }
+
+.manualLink{
+
+display:block;
+padding:0;
+
+}
+
+.logoManual{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ padding-top: 100px;
+}
+
+/*link im Benutzerhandbuch über Logo*/
+.logoManualLink{
+
+    padding:0;
+
+    display:block;
+
+}
+
+
+    hr { 
+        width: 95%; 
+        height: 5px; 
+        margin: 0 auto;
+        color:yellow;
+        background: green;
+    }
+
         .homebutton {
             font-family: 'calibri';
             display: table; 
@@ -148,6 +198,7 @@ padding:0;
         }
 
 
+
         
         .content {
         
@@ -161,6 +212,17 @@ padding:0;
           margin-top: 30px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        
+        .subcontent2{
+
+            width: 550px;
+            /*max-height: 100px;*/
+          margin-top: 30px;
+        margin-left: 20px;
+        float:left;
+
         }
 
         .backgroundimage {
@@ -346,8 +408,8 @@ a {
 }
 
 a:hover {
-   /* background-color: #ddd;*/
-    background-color: grey;
+   /* background-color: #ddd;
+    background-color: grey;*/
 }
 
 .weiter {
@@ -356,6 +418,7 @@ a:hover {
     font-family: 'calibri';
     background-color: green;
     color: white;
+    border-radius: 5px;
 }
 
 .zurueck {
@@ -365,6 +428,7 @@ a:hover {
     background-color: green;
     color: white;
     font-family: 'calibri';
+    border-radius: 5px;
 }
 
 .auswertung {
