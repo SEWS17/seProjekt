@@ -132,14 +132,14 @@ if(isset($_GET["id"]) && $idurl < 10) {
     //$idurl2--;
 
 if($idurl < 10) {
-   echo "<a class='zurueck2' href='gestaltgesetzeSeite.php?id=".$idurl."'>zurück</a>";
+   echo "<a class='zurueck2' href='dialogSeite.php?id=".$idurl."'>zurück</a>";
 }
 
    if($idurl > 2)
 {
 $idurl2=$idurl-2;
  
-echo "<a class='weiter2' href='gestaltgesetzeSeite.php?id=".$idurl2."'>weiter</a>";
+echo "<a class='weiter2' href='dialogSeite.php?id=".$idurl2."'>weiter</a>";
 }
 
 
