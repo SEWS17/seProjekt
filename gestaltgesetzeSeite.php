@@ -194,9 +194,6 @@ $idurl2=$idurl-2;
 echo "<a class='zurueck2' href='gestaltgesetzeSeite.php?id=".$idurl2."'>zurück</a>";
 }
 
-if($idurl < 10) {
-   echo "<a class='weiter' href='gestaltgesetzeSeite.php?id=".$idurl."'>weiter</a>";
-}
 
 }
    
