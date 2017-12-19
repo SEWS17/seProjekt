@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         //print_r($row);
         if($row["id"] == $_GET['id']) {
-echo "<img class= quizbild src='".$row["Bild"]."' alt='".$row["Bildbeschreibung"]."'/>";
+echo "<img class= 'quizbild' src='".$row["Bild"]."' alt='".$row["Bildbeschreibung"]."'/>";
 echo "<h1 style='font-size:20px;margin-top:50px; font-weight:bold; text-align: left; '>Frage ".$row["id"].":</h1>";
 echo "<p style='font-size:17px; font-weight:bold; text-align: left; '>".$row["Frage"]."</p>";
 echo "<form method='post'>";

@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 
 mysqli_set_charset($conn, 'utf8');
 
-$sql = "SELECT id, ATEXT, BILD1, BILD2, KORREKTE_ANTWORT FROM abschlusstest_auswahl_gestaltgesetze";
+$sql = "SELECT id, ATEXT, BildBeschreibung, BildBeschreibung2, BILD1, BILD2, KORREKTE_ANTWORT FROM abschlusstest_auswahl_gestaltgesetze";
 $result = $conn->query($sql);
 
  
@@ -57,12 +57,11 @@ if ($result->num_rows > 0) {
                    
             echo "<label><input type='radio'style='display:none;' name='Kategorie' value='auswahl1'";
             if(@$_POST['Kategorie'] == 'auswahl1') {echo "checked";}
-            echo "> <img src='".$row["BILD1"]."'height='200px' width='360px';></label>";
+            echo "> <img src='".$row["BILD1"]."' alt ='".$row["BildBeschreibung"]."' height='200px' width='360px';></label>";
 
             echo "<label><input type='radio'style='display:none;' name='Kategorie' value='auswahl2'";
             if(@$_POST['Kategorie'] == 'auswahl2') {echo "checked";}
-            echo "> <img src='".$row["BILD2"]."'height='200px' width='360px';></label>";
-
+            echo "> <img src='".$row["BILD1"]."' alt ='".$row["BildBeschreibung2"]."' height='200px' width='360px';></label>";
 
                    
            echo "<br>";
